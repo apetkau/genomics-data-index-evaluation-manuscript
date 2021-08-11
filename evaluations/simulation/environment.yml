@@ -1,0 +1,26 @@
+name: gdi-simulation
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - jupyterlab
+  - bioconductor-rhtslib
+  - python=3.8
+  - r-irkernel
+  - r-ape
+  - r-phytools
+  - r-phangorn
+  - pymongo
+  - bcftools
+  - matplotlib
+  - pyqt
+  - bedtools
+  - iqtree
+  - bcftools
+  - htslib
+  - sqlalchemy>=1.4
+  - snpeff
+  - pip
+  - pip:
+    - genomics-data-index==0.2.0
