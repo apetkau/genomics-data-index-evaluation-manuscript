@@ -25,3 +25,13 @@ wget https://data.nextstrain.org/files/ncov/open/mutation-summary.tsv.xz
 ```bash
 find input/ | xargs sha256sum >> sha256.input
 ```
+
+# 2. Extract sequences to separate files
+
+I currently need every genome to be a separate fasta file to analyze the data in my software. So I need to extract all genomes into separate fasta files.
+
+Run `extract-sequences.ipynb`
+
+# 3. Create index
+
+Run 
