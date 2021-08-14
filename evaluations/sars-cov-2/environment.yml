@@ -5,6 +5,7 @@ channels:
   - defaults
 dependencies:
   - jupyterlab
+  - nbconvert
   - bioconductor-rhtslib
   - python=3.8
   - r-irkernel
@@ -25,3 +26,4 @@ dependencies:
   - pip:
     - genomics-data-index==0.2.0
     - cmdbench
+    - jupyter_contrib_nbextensions
