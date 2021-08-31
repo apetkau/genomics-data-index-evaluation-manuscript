@@ -14,6 +14,7 @@ import glob
 from shutil import rmtree
 import subprocess
 import genomics_data_index.api as gdi
+from genomics_data_index.storage.io.mutation.SequenceFile import SequenceFile
 
 
 class IndexBenchmarker:
@@ -24,6 +25,7 @@ class IndexBenchmarker:
         self._index_path = index_path
         self._input_files_file = input_files_file
         self._reference_file = reference_file
+        self._reference_name, records = SequenceFile(reference_file).parse_sequence_file()
         
         input_df = pd.read_csv(input_files_file, sep='\t')
         self._number_samples = len(input_df)
@@ -47,36 +49,68 @@ class IndexBenchmarker:
 
         return vcf_input_file
 
-    def build_index_analysis(self, iteration: int):
+    def benchmark(iterations: int = 1):
+        pass
+
+
+    def build_index_analysis(self, iteration: int, build_tree: bool = False):
+        print(f'\nIteration {iteration} of index/analysis of {self._number_samples} samples with {self._ncores} cores')
+
         snakemake_dirs = glob.glob('snakemake*')
         print(f'Removing any extra snakemake directories: {snakemake_dirs}')
         for d in snakemake_dirs:
             rmtree(d)
 
-        print(f'\n***ANALYSIS of {self._number_samples} samples with {self._ncores} cores')
+        if self._index_path.exists():
+            print(f'Removing any existing indexes {self._index_path}')
+            rmtree(self._index_path)
+
+        create_index_cmd = f'gdi init {self._index_path}'
+        print(f'Creating new index: [{create_index_cmd}]')
+        before_time = time.time()
+        cmdbench.benchmark_command(create_index_cmd, iterations_num=1)
+        after_time = time.time()
+        print(f'Creating a new index took {(after_time - before_time):0.2f} seconds')
+
         analysis_cmd = (
             f"gdi --project-dir {self._index_path} --ncores {self._ncores} analysis"
             f" --use-conda --no-load-data --reference-file {self._reference_file}" 
             f" --reads-mincov {self._mincov}"
             f" --input-structured-genomes-file {self._input_files_file}"
         )
-        print(f"Iteration {iteration}: running: [{analysis_cmd}]")
+        print(f"Analysis running: [{analysis_cmd}]")
         before_time = time.time()
-        benchmark_analysis = cmdbench.benchmark_command(analysis_cmd)
+        benchmark_analysis = cmdbench.benchmark_command(analysis_cmd, iterations_num=1)
         after_time = time.time()
         print(f'Analysis took {(after_time - before_time)/60:0.2f} minutes')
 
-        print(f'\n***INDEX of {self._number_samples} samples with {self._ncores} cores***')
         index_input_file = self._get_and_validate_index_input(expected_number_samples=self._number_samples)
         index_cmd = (
             f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf"
             f" --reference-file {self._reference_file} {index_input_file}"
         )
-        print(f"Running: [{index_cmd}]")
+        print(f"Index running: [{index_cmd}]")
         before_time = time.time()
         benchmark_index = cmdbench.benchmark_command(index_cmd, iterations_num = 1)
         after_time = time.time()
         print(f'Indexing took {(after_time - before_time)/60:0.2f} minutes')
 
-        return benchmark_index
+        if build_tree:
+            build_cmd = (
+                f"gdi --project-dir {self._index_path} --ncores {self._ncores} rebuild tree"
+                f" --align-type full --extra-params '--fast -m GTR+F+R4' --reference-name {self._reference_name}"
+            )
+            print(f"Building tree: [{build_cmd}]")
+            before_time = time.time()
+            benchmark_tree = cmdbench.benchmark_command(build_cmd, iterations_num = 1)
+            after_time = time.time()
+            print(f'Building tree took {(after_time - before_time)/60:0.2f} minutes')
+        else:
+            benchmark_tree = None
+
+        return {
+            'analysis': benchmark_analysis,
+            'index': benchmark_index,
+            'tree': benchmark_tree
+        }
 
