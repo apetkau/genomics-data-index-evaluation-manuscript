@@ -18,3 +18,11 @@ mkdir simulations
 # Run simulations
 ./1-data-simulation.sh | tee log.1-data-simulation
 ```
+
+# 2. Indexing genomes
+
+
+```bash
+# Run indexing
+./2-index-genomes.sh | tee log.2-index-genomes
+```
