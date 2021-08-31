@@ -1,0 +1,4 @@
+read_coverage: 30
+mincov: 10
+simulation_dir: 'simulations/cov-30'
+iterations: 3

@@ -1,3 +1,4 @@
 read_coverage: 5
+mincov: 10
 simulation_dir: 'simulations/cov-5'
-iterations: 5
+iterations: 3
