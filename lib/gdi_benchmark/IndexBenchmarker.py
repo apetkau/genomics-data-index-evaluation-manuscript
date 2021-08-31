@@ -122,9 +122,12 @@ class IndexBenchmarker:
 
         return vcf_input_file
 
-    def benchmark(iterations: int = 1):
-        pass
+    def benchmark(self, iterations: int = 1) -> pd.DataFrame:
+        index_df_iterations = []
+        for iteration in range(1, iterations + 1):
+           index_df_iterations.append(self.build_index_analysis(iteration))
 
+        return pd.concat(index_df_iterations)
 
     def build_index_analysis(self, iteration: int) -> pd.DataFrame:
         print(f'\nIteration {iteration} of index/analysis of {self._number_samples} samples with {self._ncores} cores')
