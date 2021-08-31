@@ -1,2 +1,3 @@
 read_coverage: 10
 simulation_dir: 'simulations/cov-10'
+iterations: 5
