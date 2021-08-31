@@ -7,25 +7,98 @@ from shutil import rmtree
 import gzip
 from Bio import SeqIO
 from typing import List
-import pandas as pd
-import time
-import cmdbench
-import glob
-from shutil import rmtree
 import subprocess
 import genomics_data_index.api as gdi
 from genomics_data_index.storage.io.mutation.SequenceFile import SequenceFile
 
 
+class BenchmarkResultsHandler:
+    
+    def __init__(self, name: str):
+        self._name = name
+    
+    def benchmark_to_df(self, iteration: int, number_samples: int, benchmark_analysis, benchmark_index, benchmark_tree,
+                    index_path: Path, analysis_path: Path,
+                    ncores: int, reference_length: int) -> pd.DataFrame:
+        analysis_data = benchmark_analysis.get_first_iteration()
+        index_data = benchmark_index.get_first_iteration()
+        tree_data = benchmark_tree.get_first_iteration() if benchmark_tree is not None else None
+
+        analysis_size = subprocess.check_output(
+            ['du', '-s', '--block-size=1', str(analysis_path)]).split()[0].decode('utf-8')
+
+        db = gdi.GenomicsDataIndex.connect(index_path)
+        index_size = db.db_size(unit='B').set_index('Type').loc['Total']['Data Size (B)']
+
+        tree_runtime = float(tree_data['process']['execution_time']) if tree_data is not None else pd.NA
+        tree_memory_max = float(tree_data['memory']['max']) if tree_data is not None else pd.NA
+        tree_memory_max_proc = float(tree_data['memory']['max_perprocess']) if tree_data is not None else pd.NA
+
+        df = pd.DataFrame(data={
+            'Name': [self._name],
+            'Iteration': [iteration],
+            'Number samples': [int(number_samples)],
+            'Number cores': [ncores],
+            'Reference length': [reference_length],
+            'Analysis runtime': [float(analysis_data['process']['execution_time'])],
+            'Analysis memory (max)': [float(analysis_data['memory']['max'])],
+            'Analysis memory (max/process)': [float(analysis_data['memory']['max_perprocess'])],
+            'Analysis disk uage': [float(analysis_size)],
+            'Index runtime': [float(index_data['process']['execution_time'])],
+            'Index memory (max)': [float(index_data['memory']['max'])],
+            'Index memory (max/process)': [float(index_data['memory']['max_perprocess'])],
+            'Index size': [index_size],
+            'Tree runtime': [tree_runtime],
+            'Tree memory (max)': [tree_memory_max],
+            'Tree memory (max/process)': [tree_memory_max_proc],
+        })
+
+        if not pd.isna(tree_runtime):
+            df['Total runtime'] = df['Analysis runtime'] + df['Index runtime'] + df['Tree runtime']
+        else:
+            df['Total runtime'] = df['Analysis runtime'] + df['Index runtime']
+
+        if not pd.isna(tree_memory_max):
+            df['Max memory'] = df[['Analysis memory (max)', 'Index memory (max)', 'Tree memory (max)']].max(axis='columns')
+        else:
+            df['Max memory'] = df[['Analysis memory (max)', 'Index memory (max)']].max(axis='columns')
+
+        return df
+
+    def convert_sizes(self, df: pd.DataFrame) -> pd.DataFrame:
+        size_factor = 1024**3 # GB
+        time_factor = 60 # min
+
+        new_df = df.copy()
+        size_cols = ['Analysis memory (max)', 'Analysis memory (max/process)',
+               'Analysis disk uage', 'Index memory (max)', 'Index memory (max/process)',
+               'Index size', 'Max memory']
+        time_cols = ['Analysis runtime', 'Index runtime', 'Total runtime']
+
+        for col in size_cols:
+            new_df[col] = df[col] / size_factor
+
+        for col in time_cols:
+            new_df[col] = df[col] / time_factor
+
+        return new_df
+
+
 class IndexBenchmarker:
     
-    def __init__(self, index_path: Path, input_files_file: Path, reference_file: Path, ncores: int, mincov: int = 5):
+    def __init__(self, benchmark_results_handler: BenchmarkResultsHandler,
+                       index_path: Path, input_files_file: Path, reference_file: Path, ncores: int, mincov: int = 5, build_tree: bool = False):
         self._ncores = ncores
         self._mincov = mincov
         self._index_path = index_path
         self._input_files_file = input_files_file
         self._reference_file = reference_file
         self._reference_name, records = SequenceFile(reference_file).parse_sequence_file()
+        self._reference_length = 0
+        for record in records:
+            self._reference_length = self._reference_length + len(record)
+        self._build_tree = build_tree
+        self._benchmark_results_handler = benchmark_results_handler
         
         input_df = pd.read_csv(input_files_file, sep='\t')
         self._number_samples = len(input_df)
@@ -53,7 +126,7 @@ class IndexBenchmarker:
         pass
 
 
-    def build_index_analysis(self, iteration: int, build_tree: bool = False):
+    def build_index_analysis(self, iteration: int) -> pd.DataFrame:
         print(f'\nIteration {iteration} of index/analysis of {self._number_samples} samples with {self._ncores} cores')
 
         snakemake_dirs = glob.glob('snakemake*')
@@ -86,7 +159,7 @@ class IndexBenchmarker:
 
         index_input_file = self._get_and_validate_index_input(expected_number_samples=self._number_samples)
         index_cmd = (
-            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf"
+            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf --no-index-unknown"
             f" --reference-file {self._reference_file} {index_input_file}"
         )
         print(f"Index running: [{index_cmd}]")
@@ -95,7 +168,7 @@ class IndexBenchmarker:
         after_time = time.time()
         print(f'Indexing took {(after_time - before_time)/60:0.2f} minutes')
 
-        if build_tree:
+        if self._build_tree:
             build_cmd = (
                 f"gdi --project-dir {self._index_path} --ncores {self._ncores} rebuild tree"
                 f" --align-type full --extra-params '--fast -m GTR+F+R4' --reference-name {self._reference_name}"
@@ -108,9 +181,14 @@ class IndexBenchmarker:
         else:
             benchmark_tree = None
 
-        return {
-            'analysis': benchmark_analysis,
-            'index': benchmark_index,
-            'tree': benchmark_tree
-        }
-
+        benchmark_df = self._benchmark_results_handler.benchmark_to_df(iteration=iteration,
+                                                       number_samples=self._number_samples,
+                                                       benchmark_analysis=benchmark_analysis,
+                                                       benchmark_index=benchmark_index,
+                                                       benchmark_tree=benchmark_tree,
+                                                       index_path=self._index_path,
+                                                       analysis_path=index_input_file.parent,
+                                                       ncores=self._ncores,
+                                                       reference_length=self._reference_length)
+         
+        return benchmark_df
