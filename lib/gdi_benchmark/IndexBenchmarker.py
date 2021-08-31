@@ -151,6 +151,7 @@ class IndexBenchmarker:
         analysis_cmd = (
             f"gdi --project-dir {self._index_path} --ncores {self._ncores} analysis"
             f" --use-conda --no-load-data --reference-file {self._reference_file}" 
+            f" --kmer-size 31 --kmer-size 51 --kmer-size 71 --include-kmer"
             f" --reads-mincov {self._mincov}"
             f" --input-structured-genomes-file {self._input_files_file}"
         )
@@ -162,7 +163,7 @@ class IndexBenchmarker:
 
         index_input_file = self._get_and_validate_index_input(expected_number_samples=self._number_samples)
         index_cmd = (
-            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf --no-index-unknown"
+            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf"
             f" --reference-file {self._reference_file} {index_input_file}"
         )
         print(f"Index running: [{index_cmd}]")
