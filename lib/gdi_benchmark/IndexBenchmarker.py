@@ -175,7 +175,7 @@ class IndexBenchmarker:
         if self._build_tree:
             build_cmd = (
                 f"gdi --project-dir {self._index_path} --ncores {self._ncores} rebuild tree"
-                f" --align-type full --extra-params '--fast -m GTR+F+R4' --reference-name {self._reference_name}"
+                f" --align-type full --extra-params '--fast -m GTR+F+R4' {self._reference_name}"
             )
             print(f"Building tree: [{build_cmd}]")
             before_time = time.time()
