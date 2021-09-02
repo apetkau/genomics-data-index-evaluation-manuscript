@@ -29,3 +29,15 @@ mkdir simulations
 # Run indexing
 ./2-index-genomes.sh | tee log.2-index-genomes
 ```
+
+# 3. Variants comparison
+
+```bash
+./3-variants-comparison.sh | tee log.3-variants-comparison
+```
+
+# 4. Query
+
+```bash
+./4-query-comparison.sh | tee log.4-query-comparison
+```

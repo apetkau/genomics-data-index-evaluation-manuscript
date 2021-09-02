@@ -1,0 +1,51 @@
+Name	Kind	Number features	Iteration	Time
+cov-40 (assemblies)	features_summary	765	1	0.07292025769129395
+cov-40 (assemblies)	features_summary	765	2	0.07404301799833775
+cov-40 (assemblies)	features_summary	765	3	0.07230805791914463
+cov-40 (assemblies)	features_summary	765	4	0.07223987001925707
+cov-40 (assemblies)	features_summary	765	5	0.0723680866882205
+cov-40 (assemblies)	features_summary	765	6	0.07311476571485401
+cov-40 (assemblies)	features_summary	765	7	0.07269980534911155
+cov-40 (assemblies)	features_summary	765	8	0.07255890415981411
+cov-40 (assemblies)	features_summary	765	9	0.07222056752070785
+cov-40 (assemblies)	features_summary	765	10	0.07288391636684537
+cov-40 (assemblies)	hasa	765	1	0.0009381399340927601
+cov-40 (assemblies)	hasa	765	2	0.0009552082074806094
+cov-40 (assemblies)	hasa	765	3	0.0009490148769691586
+cov-40 (assemblies)	hasa	765	4	0.0009491647602990269
+cov-40 (assemblies)	hasa	765	5	0.0009489935208112001
+cov-40 (assemblies)	hasa	765	6	0.000949312288314104
+cov-40 (assemblies)	hasa	765	7	0.0009636615924537182
+cov-40 (assemblies)	hasa	765	8	0.0009346948722377419
+cov-40 (assemblies)	hasa	765	9	0.0009320562351495027
+cov-40 (assemblies)	hasa	765	10	0.0009328566202893853
+cov-40 (assemblies)	isa	765	1	0.000399195333942771
+cov-40 (assemblies)	isa	765	2	0.00039752080757170916
+cov-40 (assemblies)	isa	765	3	0.00039921481627970936
+cov-40 (assemblies)	isa	765	4	0.00039836727920919656
+cov-40 (assemblies)	isa	765	5	0.00039874068181961777
+cov-40 (assemblies)	isa	765	6	0.00039775139186531305
+cov-40 (assemblies)	isa	765	7	0.00039774917718023064
+cov-40 (assemblies)	isa	765	8	0.000398537315428257
+cov-40 (assemblies)	isa	765	9	0.0003986543314531446
+cov-40 (assemblies)	isa	765	10	0.0003988554868847132
+cov-40 (assemblies)	isin distance	765	1	0.0023561448138207197
+cov-40 (assemblies)	isin distance	765	2	0.002351820012554526
+cov-40 (assemblies)	isin distance	765	3	0.0023668431956321
+cov-40 (assemblies)	isin distance	765	4	0.002347792852669954
+cov-40 (assemblies)	isin distance	765	5	0.002353078220039606
+cov-40 (assemblies)	isin distance	765	6	0.0023397637344896795
+cov-40 (assemblies)	isin distance	765	7	0.0023393243830651046
+cov-40 (assemblies)	isin distance	765	8	0.002340472154319286
+cov-40 (assemblies)	isin distance	765	9	0.0023845298867672684
+cov-40 (assemblies)	isin distance	765	10	0.002349240453913808
+cov-40 (assemblies)	isin mrca	765	1	0.0006343258842825889
+cov-40 (assemblies)	isin mrca	765	2	0.0006332535101100802
+cov-40 (assemblies)	isin mrca	765	3	0.0006367813181132079
+cov-40 (assemblies)	isin mrca	765	4	0.0006338426247239113
+cov-40 (assemblies)	isin mrca	765	5	0.0006377596212550998
+cov-40 (assemblies)	isin mrca	765	6	0.0006339679313823581
+cov-40 (assemblies)	isin mrca	765	7	0.0006350946938619017
+cov-40 (assemblies)	isin mrca	765	8	0.0006333007672801613
+cov-40 (assemblies)	isin mrca	765	9	0.000633485329337418
+cov-40 (assemblies)	isin mrca	765	10	0.0006428300952538848
