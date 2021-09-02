@@ -1,0 +1,51 @@
+Name	Kind	Number features	Iteration	Time
+unset (assemblies)	features_summary	765	1	0.057763072103261946
+unset (assemblies)	features_summary	765	2	0.05788893708959222
+unset (assemblies)	features_summary	765	3	0.05860472656786442
+unset (assemblies)	features_summary	765	4	0.05899011055007577
+unset (assemblies)	features_summary	765	5	0.05902080163359642
+unset (assemblies)	features_summary	765	6	0.05901981256902218
+unset (assemblies)	features_summary	765	7	0.059091504011303184
+unset (assemblies)	features_summary	765	8	0.05903507033362985
+unset (assemblies)	features_summary	765	9	0.058915695548057555
+unset (assemblies)	features_summary	765	10	0.0590353537350893
+unset (assemblies)	hasa	765	1	0.0009664251292124391
+unset (assemblies)	hasa	765	2	0.0009640654381364584
+unset (assemblies)	hasa	765	3	0.0009639960778877139
+unset (assemblies)	hasa	765	4	0.0009681220902130008
+unset (assemblies)	hasa	765	5	0.000962982621975243
+unset (assemblies)	hasa	765	6	0.000962723613716662
+unset (assemblies)	hasa	765	7	0.0009630930926650763
+unset (assemblies)	hasa	765	8	0.0009634197242558003
+unset (assemblies)	hasa	765	9	0.0009634488821029663
+unset (assemblies)	hasa	765	10	0.0009631953146308661
+unset (assemblies)	isa	765	1	0.00041264911089092493
+unset (assemblies)	isa	765	2	0.0004127861252054572
+unset (assemblies)	isa	765	3	0.0004131032256409526
+unset (assemblies)	isa	765	4	0.0004126827558502555
+unset (assemblies)	isa	765	5	0.00041292920801788566
+unset (assemblies)	isa	765	6	0.0004130213502794504
+unset (assemblies)	isa	765	7	0.00041331190057098863
+unset (assemblies)	isa	765	8	0.0004127869699150324
+unset (assemblies)	isa	765	9	0.0004126931205391884
+unset (assemblies)	isa	765	10	0.00041278166882693766
+unset (assemblies)	isin distance	765	1	0.002398311793804169
+unset (assemblies)	isin distance	765	2	0.002399002853780985
+unset (assemblies)	isin distance	765	3	0.002396959364414215
+unset (assemblies)	isin distance	765	4	0.0023974854685366153
+unset (assemblies)	isin distance	765	5	0.0023978009168058633
+unset (assemblies)	isin distance	765	6	0.0023977618478238584
+unset (assemblies)	isin distance	765	7	0.002400763798505068
+unset (assemblies)	isin distance	765	8	0.0023977112397551535
+unset (assemblies)	isin distance	765	9	0.00239672495983541
+unset (assemblies)	isin distance	765	10	0.002397699160501361
+unset (assemblies)	isin mrca	765	1	0.0006851796489208936
+unset (assemblies)	isin mrca	765	2	0.0006849514823406935
+unset (assemblies)	isin mrca	765	3	0.0006847954811528325
+unset (assemblies)	isin mrca	765	4	0.0006865456523373723
+unset (assemblies)	isin mrca	765	5	0.0006848525255918503
+unset (assemblies)	isin mrca	765	6	0.0006850768225267529
+unset (assemblies)	isin mrca	765	7	0.000685297004878521
+unset (assemblies)	isin mrca	765	8	0.0006851732041686774
+unset (assemblies)	isin mrca	765	9	0.0006852098032832146
+unset (assemblies)	isin mrca	765	10	0.0006888309838250279

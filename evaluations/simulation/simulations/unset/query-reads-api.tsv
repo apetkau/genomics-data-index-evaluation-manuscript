@@ -1,0 +1,51 @@
+Name	Kind	Number features	Iteration	Time
+unset (reads)	features_summary	748	1	0.054080521874129775
+unset (reads)	features_summary	748	2	0.053287438955157994
+unset (reads)	features_summary	748	3	0.05312658883631229
+unset (reads)	features_summary	748	4	0.05426037022843957
+unset (reads)	features_summary	748	5	0.053021563496440646
+unset (reads)	features_summary	748	6	0.053032991196960214
+unset (reads)	features_summary	748	7	0.05316524188965559
+unset (reads)	features_summary	748	8	0.05373214073479175
+unset (reads)	features_summary	748	9	0.05448910351842642
+unset (reads)	features_summary	748	10	0.05616407105699182
+unset (reads)	hasa	748	1	0.001046864315867424
+unset (reads)	hasa	748	2	0.0010698984283953905
+unset (reads)	hasa	748	3	0.0011036497876048088
+unset (reads)	hasa	748	4	0.0010948866307735443
+unset (reads)	hasa	748	5	0.0010954087888821959
+unset (reads)	hasa	748	6	0.0010959071358665824
+unset (reads)	hasa	748	7	0.0010962327523157001
+unset (reads)	hasa	748	8	0.001095800019800663
+unset (reads)	hasa	748	9	0.0011101667815819382
+unset (reads)	hasa	748	10	0.0011087320568040012
+unset (reads)	isa	748	1	0.0004123692633584142
+unset (reads)	isa	748	2	0.0004121224069967866
+unset (reads)	isa	748	3	0.000412111422047019
+unset (reads)	isa	748	4	0.0004056948088109493
+unset (reads)	isa	748	5	0.00040428237523883583
+unset (reads)	isa	748	6	0.0004007297493517399
+unset (reads)	isa	748	7	0.0004006568007171154
+unset (reads)	isa	748	8	0.0003859371589496732
+unset (reads)	isa	748	9	0.0003821670124307275
+unset (reads)	isa	748	10	0.0003814355470240116
+unset (reads)	isin distance	748	1	0.0019930926533415915
+unset (reads)	isin distance	748	2	0.0021193658635020257
+unset (reads)	isin distance	748	3	0.0021193471103906633
+unset (reads)	isin distance	748	4	0.002117183951660991
+unset (reads)	isin distance	748	5	0.0020993282115086913
+unset (reads)	isin distance	748	6	0.002100577709265053
+unset (reads)	isin distance	748	7	0.0021005543256178497
+unset (reads)	isin distance	748	8	0.0021032396433874963
+unset (reads)	isin distance	748	9	0.0021012758873403072
+unset (reads)	isin distance	748	10	0.0021079833144322037
+unset (reads)	isin mrca	748	1	0.000710036595351994
+unset (reads)	isin mrca	748	2	0.0007096993820741773
+unset (reads)	isin mrca	748	3	0.0007102118134498596
+unset (reads)	isin mrca	748	4	0.0007103374972939491
+unset (reads)	isin mrca	748	5	0.0007107333913445472
+unset (reads)	isin mrca	748	6	0.0007101751072332263
+unset (reads)	isin mrca	748	7	0.0007101740119978785
+unset (reads)	isin mrca	748	8	0.0007098889499902725
+unset (reads)	isin mrca	748	9	0.000709063227288425
+unset (reads)	isin mrca	748	10	0.0007107468396425247
