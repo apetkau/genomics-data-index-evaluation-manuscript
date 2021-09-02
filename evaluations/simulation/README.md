@@ -2,9 +2,12 @@ To install, after creating conda environment from `environment.yml` run in R:
 
 ```R
 install.packages("jackalope", type="source")
+install.packages("treespace")
 ```
 
 Note, please see <https://lucasnell.github.io/jackalope/index.html#enabling-openmp> for enabling openmp to use multiple threads.
+
+Also install <https://github.com/apetkau/genomics-data-index>
 
 # 1. Data simulations
 

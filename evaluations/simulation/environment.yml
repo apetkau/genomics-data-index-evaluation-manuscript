@@ -1,27 +1,30 @@
 name: gdi-simulation
 channels:
   - conda-forge
+  - r
   - bioconda
   - defaults
 dependencies:
-  - jupyterlab
-  - bioconductor-rhtslib
-  - python=3.8
-  - r-irkernel
   - r-ape
-  - r-phytools
-  - r-phangorn
-  - pymongo
-  - bcftools
-  - matplotlib
-  - pyqt
-  - bedtools
-  - iqtree
-  - bcftools
-  - htslib
-  - sqlalchemy>=1.4
   - snpeff
+  - htslib
+  - jupyterlab
+  - matplotlib
   - pip
-  - pip:
-    - genomics-data-index==0.2.0
-    - cmdbench
+  - pyqt
+  - r-phytools
+  - sqlalchemy[version='>=1.4']
+  - python=3.8
+  - bioconductor-rhtslib
+  - bedtools
+  - r-irkernel
+  - pymongo
+  - iqtree
+  - r-phangorn
+  - bcftools
+  - papermill
+  - ca-certificates
+  - certifi
+  - openssl
+  - udunits2
+  - r-sf
