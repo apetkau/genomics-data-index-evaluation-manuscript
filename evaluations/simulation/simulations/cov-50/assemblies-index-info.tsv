@@ -1,0 +1,4 @@
+Name	Iteration	Number samples	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
+cov-50 assemblies	1	59	32	10834	94.9	1173053440.0	379752448.0	2082598912.0	5.08	5782835200.0	237694976.0	1064960.0	93.64	242106368.0	224083968.0	193.62	5782835200.0
+cov-50 assemblies	2	59	32	10834	90.23	1290027008.0	365555712.0	2082603008.0	5.44	5781643264.0	237776896.0	1064960.0	80.51	240832512.0	223670272.0	176.18	5781643264.0
+cov-50 assemblies	3	59	32	10834	90.92	1194876928.0	374603776.0	2082578432.0	5.47	5786107904.0	238034944.0	1064960.0	95.43	240508928.0	223723520.0	191.82	5786107904.0
