@@ -1,1 +1,1 @@
-from .IndexBenchmarker import IndexBenchmarker, BenchmarkResultsHandler
+from .EvaluationBenchmarker import IndexBenchmarker, BenchmarkResultsHandler, QueryBenchmarkHandler
