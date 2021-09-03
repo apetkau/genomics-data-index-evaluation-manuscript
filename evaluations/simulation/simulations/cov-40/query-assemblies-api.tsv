@@ -1,51 +1,111 @@
-Name	Kind	Number features	Iteration	Time
-cov-40 (assemblies)	features_summary	765	1	0.07292025769129395
-cov-40 (assemblies)	features_summary	765	2	0.07404301799833775
-cov-40 (assemblies)	features_summary	765	3	0.07230805791914463
-cov-40 (assemblies)	features_summary	765	4	0.07223987001925707
-cov-40 (assemblies)	features_summary	765	5	0.0723680866882205
-cov-40 (assemblies)	features_summary	765	6	0.07311476571485401
-cov-40 (assemblies)	features_summary	765	7	0.07269980534911155
-cov-40 (assemblies)	features_summary	765	8	0.07255890415981411
-cov-40 (assemblies)	features_summary	765	9	0.07222056752070785
-cov-40 (assemblies)	features_summary	765	10	0.07288391636684537
-cov-40 (assemblies)	hasa	765	1	0.0009381399340927601
-cov-40 (assemblies)	hasa	765	2	0.0009552082074806094
-cov-40 (assemblies)	hasa	765	3	0.0009490148769691586
-cov-40 (assemblies)	hasa	765	4	0.0009491647602990269
-cov-40 (assemblies)	hasa	765	5	0.0009489935208112001
-cov-40 (assemblies)	hasa	765	6	0.000949312288314104
-cov-40 (assemblies)	hasa	765	7	0.0009636615924537182
-cov-40 (assemblies)	hasa	765	8	0.0009346948722377419
-cov-40 (assemblies)	hasa	765	9	0.0009320562351495027
-cov-40 (assemblies)	hasa	765	10	0.0009328566202893853
-cov-40 (assemblies)	isa	765	1	0.000399195333942771
-cov-40 (assemblies)	isa	765	2	0.00039752080757170916
-cov-40 (assemblies)	isa	765	3	0.00039921481627970936
-cov-40 (assemblies)	isa	765	4	0.00039836727920919656
-cov-40 (assemblies)	isa	765	5	0.00039874068181961777
-cov-40 (assemblies)	isa	765	6	0.00039775139186531305
-cov-40 (assemblies)	isa	765	7	0.00039774917718023064
-cov-40 (assemblies)	isa	765	8	0.000398537315428257
-cov-40 (assemblies)	isa	765	9	0.0003986543314531446
-cov-40 (assemblies)	isa	765	10	0.0003988554868847132
-cov-40 (assemblies)	isin distance	765	1	0.0023561448138207197
-cov-40 (assemblies)	isin distance	765	2	0.002351820012554526
-cov-40 (assemblies)	isin distance	765	3	0.0023668431956321
-cov-40 (assemblies)	isin distance	765	4	0.002347792852669954
-cov-40 (assemblies)	isin distance	765	5	0.002353078220039606
-cov-40 (assemblies)	isin distance	765	6	0.0023397637344896795
-cov-40 (assemblies)	isin distance	765	7	0.0023393243830651046
-cov-40 (assemblies)	isin distance	765	8	0.002340472154319286
-cov-40 (assemblies)	isin distance	765	9	0.0023845298867672684
-cov-40 (assemblies)	isin distance	765	10	0.002349240453913808
-cov-40 (assemblies)	isin mrca	765	1	0.0006343258842825889
-cov-40 (assemblies)	isin mrca	765	2	0.0006332535101100802
-cov-40 (assemblies)	isin mrca	765	3	0.0006367813181132079
-cov-40 (assemblies)	isin mrca	765	4	0.0006338426247239113
-cov-40 (assemblies)	isin mrca	765	5	0.0006377596212550998
-cov-40 (assemblies)	isin mrca	765	6	0.0006339679313823581
-cov-40 (assemblies)	isin mrca	765	7	0.0006350946938619017
-cov-40 (assemblies)	isin mrca	765	8	0.0006333007672801613
-cov-40 (assemblies)	isin mrca	765	9	0.000633485329337418
-cov-40 (assemblies)	isin mrca	765	10	0.0006428300952538848
+Name	Kind	Number samples	Number features	Number executions	Iteration	Time
+cov-40 (assemblies)	db.samples_query	59	816	200	1	0.0016243987809866666
+cov-40 (assemblies)	db.samples_query	59	816	200	2	0.0016239268751814962
+cov-40 (assemblies)	db.samples_query	59	816	200	3	0.001655386476777494
+cov-40 (assemblies)	db.samples_query	59	816	200	4	0.0016627621464431286
+cov-40 (assemblies)	db.samples_query	59	816	200	5	0.0016535871010273694
+cov-40 (assemblies)	db.samples_query	59	816	200	6	0.0016574770445004106
+cov-40 (assemblies)	db.samples_query	59	816	200	7	0.0016579590318724514
+cov-40 (assemblies)	db.samples_query	59	816	200	8	0.0016599012492224574
+cov-40 (assemblies)	db.samples_query	59	816	200	9	0.0016573955351486802
+cov-40 (assemblies)	db.samples_query	59	816	200	10	0.0016559904580935837
+cov-40 (assemblies)	q.join	59	816	100	1	0.002121519884094596
+cov-40 (assemblies)	q.join	59	816	100	2	0.002120810300111771
+cov-40 (assemblies)	q.join	59	816	100	3	0.0021443642862141133
+cov-40 (assemblies)	q.join	59	816	100	4	0.002115257391706109
+cov-40 (assemblies)	q.join	59	816	100	5	0.0021317405160516502
+cov-40 (assemblies)	q.join	59	816	100	6	0.0021085025276988746
+cov-40 (assemblies)	q.join	59	816	100	7	0.002117320606485009
+cov-40 (assemblies)	q.join	59	816	100	8	0.00211502144113183
+cov-40 (assemblies)	q.join	59	816	100	9	0.002104518720880151
+cov-40 (assemblies)	q.join	59	816	100	10	0.002095538964495063
+cov-40 (assemblies)	q.features_summary	59	816	5	1	0.0525636387988925
+cov-40 (assemblies)	q.features_summary	59	816	5	2	0.052518346533179286
+cov-40 (assemblies)	q.features_summary	59	816	5	3	0.05243135504424572
+cov-40 (assemblies)	q.features_summary	59	816	5	4	0.052715815231204034
+cov-40 (assemblies)	q.features_summary	59	816	5	5	0.05242807194590569
+cov-40 (assemblies)	q.features_summary	59	816	5	6	0.05245708972215653
+cov-40 (assemblies)	q.features_summary	59	816	5	7	0.05246744453907013
+cov-40 (assemblies)	q.features_summary	59	816	5	8	0.05245844554156065
+cov-40 (assemblies)	q.features_summary	59	816	5	9	0.05248330887407064
+cov-40 (assemblies)	q.features_summary	59	816	5	10	0.052473566681146624
+cov-40 (assemblies)	q.features_comparison	59	816	5	1	0.05945504978299141
+cov-40 (assemblies)	q.features_comparison	59	816	5	2	0.05948862675577402
+cov-40 (assemblies)	q.features_comparison	59	816	5	3	0.05946435164660215
+cov-40 (assemblies)	q.features_comparison	59	816	5	4	0.05986508652567864
+cov-40 (assemblies)	q.features_comparison	59	816	5	5	0.05948892030864954
+cov-40 (assemblies)	q.features_comparison	59	816	5	6	0.05951142571866512
+cov-40 (assemblies)	q.features_comparison	59	816	5	7	0.05948779713362455
+cov-40 (assemblies)	q.features_comparison	59	816	5	8	0.059488536044955256
+cov-40 (assemblies)	q.features_comparison	59	816	5	9	0.05951244086027145
+cov-40 (assemblies)	q.features_comparison	59	816	5	10	0.05949208624660969
+cov-40 (assemblies)	q.hasa	59	816	500	1	0.0009037807360291481
+cov-40 (assemblies)	q.hasa	59	816	500	2	0.0009112653397023678
+cov-40 (assemblies)	q.hasa	59	816	500	3	0.0009028213731944561
+cov-40 (assemblies)	q.hasa	59	816	500	4	0.0009025825578719377
+cov-40 (assemblies)	q.hasa	59	816	500	5	0.0009013082180172205
+cov-40 (assemblies)	q.hasa	59	816	500	6	0.0009007572531700135
+cov-40 (assemblies)	q.hasa	59	816	500	7	0.0009010705798864364
+cov-40 (assemblies)	q.hasa	59	816	500	8	0.000902461277320981
+cov-40 (assemblies)	q.hasa	59	816	500	9	0.0009015211816877127
+cov-40 (assemblies)	q.hasa	59	816	500	10	0.0009010944347828627
+cov-40 (assemblies)	q.isa	59	816	1000	1	0.00039411567337810995
+cov-40 (assemblies)	q.isa	59	816	1000	2	0.0003931503556668758
+cov-40 (assemblies)	q.isa	59	816	1000	3	0.00039472424425184726
+cov-40 (assemblies)	q.isa	59	816	1000	4	0.00039338923897594213
+cov-40 (assemblies)	q.isa	59	816	1000	5	0.00039303666166961193
+cov-40 (assemblies)	q.isa	59	816	1000	6	0.00039379835035651924
+cov-40 (assemblies)	q.isa	59	816	1000	7	0.00039751562662422655
+cov-40 (assemblies)	q.isa	59	816	1000	8	0.00039598564617335794
+cov-40 (assemblies)	q.isa	59	816	1000	9	0.00039336427301168444
+cov-40 (assemblies)	q.isa	59	816	1000	10	0.0003934240322560072
+cov-40 (assemblies)	q.isin (distance)	59	816	100	1	0.002256557876244187
+cov-40 (assemblies)	q.isin (distance)	59	816	100	2	0.0022595701832324264
+cov-40 (assemblies)	q.isin (distance)	59	816	100	3	0.0022567585017532112
+cov-40 (assemblies)	q.isin (distance)	59	816	100	4	0.002261582696810365
+cov-40 (assemblies)	q.isin (distance)	59	816	100	5	0.0022598850075155495
+cov-40 (assemblies)	q.isin (distance)	59	816	100	6	0.0022564099449664354
+cov-40 (assemblies)	q.isin (distance)	59	816	100	7	0.002258405052125454
+cov-40 (assemblies)	q.isin (distance)	59	816	100	8	0.0022580303251743318
+cov-40 (assemblies)	q.isin (distance)	59	816	100	9	0.002262093015015125
+cov-40 (assemblies)	q.isin (distance)	59	816	100	10	0.002258674204349518
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	1	0.0006235452760010958
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	2	0.0006239546854048967
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	3	0.0006247720196843147
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	4	0.0006246412694454193
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	5	0.0006229532044380904
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	6	0.0006234035603702069
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	7	0.0006233774106949568
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	8	0.0006233440339565278
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	9	0.0006233066618442536
+cov-40 (assemblies)	q.isin (mrca)	59	816	500	10	0.0006259011141955853
+cov-40 (assemblies)	q AND r	59	816	20000	1	1.9485157076269388e-05
+cov-40 (assemblies)	q AND r	59	816	20000	2	1.948537495918572e-05
+cov-40 (assemblies)	q AND r	59	816	20000	3	1.951650301925838e-05
+cov-40 (assemblies)	q AND r	59	816	20000	4	1.9395307498052716e-05
+cov-40 (assemblies)	q AND r	59	816	20000	5	1.940783062018454e-05
+cov-40 (assemblies)	q AND r	59	816	20000	6	1.9729033997282386e-05
+cov-40 (assemblies)	q AND r	59	816	20000	7	1.9475323148071767e-05
+cov-40 (assemblies)	q AND r	59	816	20000	8	1.9480445329099893e-05
+cov-40 (assemblies)	q AND r	59	816	20000	9	1.939756916835904e-05
+cov-40 (assemblies)	q AND r	59	816	20000	10	1.9488337496295573e-05
+cov-40 (assemblies)	q.toframe	59	816	100	1	0.003246592348441482
+cov-40 (assemblies)	q.toframe	59	816	100	2	0.003262359360232949
+cov-40 (assemblies)	q.toframe	59	816	100	3	0.003246155790984631
+cov-40 (assemblies)	q.toframe	59	816	100	4	0.0032476135622709987
+cov-40 (assemblies)	q.toframe	59	816	100	5	0.003244677037000656
+cov-40 (assemblies)	q.toframe	59	816	100	6	0.0032436123210936784
+cov-40 (assemblies)	q.toframe	59	816	100	7	0.0032513643335551025
+cov-40 (assemblies)	q.toframe	59	816	100	8	0.003243354624137282
+cov-40 (assemblies)	q.toframe	59	816	100	9	0.0032479107938706876
+cov-40 (assemblies)	q.toframe	59	816	100	10	0.0032502511236816643
+cov-40 (assemblies)	q.summary	59	816	1000	1	0.00035060343518853186
+cov-40 (assemblies)	q.summary	59	816	1000	2	0.0003393831690773368
+cov-40 (assemblies)	q.summary	59	816	1000	3	0.00033902542386204004
+cov-40 (assemblies)	q.summary	59	816	1000	4	0.0003431232152506709
+cov-40 (assemblies)	q.summary	59	816	1000	5	0.00035153805650770664
+cov-40 (assemblies)	q.summary	59	816	1000	6	0.00034213294181972744
+cov-40 (assemblies)	q.summary	59	816	1000	7	0.0003385402746498585
+cov-40 (assemblies)	q.summary	59	816	1000	8	0.00034268165938556195
+cov-40 (assemblies)	q.summary	59	816	1000	9	0.00035621492750942705
+cov-40 (assemblies)	q.summary	59	816	1000	10	0.0003428726000711322
