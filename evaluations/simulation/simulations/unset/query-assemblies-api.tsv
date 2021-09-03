@@ -1,51 +1,111 @@
-Name	Kind	Number features	Iteration	Time
-unset (assemblies)	features_summary	765	1	0.057763072103261946
-unset (assemblies)	features_summary	765	2	0.05788893708959222
-unset (assemblies)	features_summary	765	3	0.05860472656786442
-unset (assemblies)	features_summary	765	4	0.05899011055007577
-unset (assemblies)	features_summary	765	5	0.05902080163359642
-unset (assemblies)	features_summary	765	6	0.05901981256902218
-unset (assemblies)	features_summary	765	7	0.059091504011303184
-unset (assemblies)	features_summary	765	8	0.05903507033362985
-unset (assemblies)	features_summary	765	9	0.058915695548057555
-unset (assemblies)	features_summary	765	10	0.0590353537350893
-unset (assemblies)	hasa	765	1	0.0009664251292124391
-unset (assemblies)	hasa	765	2	0.0009640654381364584
-unset (assemblies)	hasa	765	3	0.0009639960778877139
-unset (assemblies)	hasa	765	4	0.0009681220902130008
-unset (assemblies)	hasa	765	5	0.000962982621975243
-unset (assemblies)	hasa	765	6	0.000962723613716662
-unset (assemblies)	hasa	765	7	0.0009630930926650763
-unset (assemblies)	hasa	765	8	0.0009634197242558003
-unset (assemblies)	hasa	765	9	0.0009634488821029663
-unset (assemblies)	hasa	765	10	0.0009631953146308661
-unset (assemblies)	isa	765	1	0.00041264911089092493
-unset (assemblies)	isa	765	2	0.0004127861252054572
-unset (assemblies)	isa	765	3	0.0004131032256409526
-unset (assemblies)	isa	765	4	0.0004126827558502555
-unset (assemblies)	isa	765	5	0.00041292920801788566
-unset (assemblies)	isa	765	6	0.0004130213502794504
-unset (assemblies)	isa	765	7	0.00041331190057098863
-unset (assemblies)	isa	765	8	0.0004127869699150324
-unset (assemblies)	isa	765	9	0.0004126931205391884
-unset (assemblies)	isa	765	10	0.00041278166882693766
-unset (assemblies)	isin distance	765	1	0.002398311793804169
-unset (assemblies)	isin distance	765	2	0.002399002853780985
-unset (assemblies)	isin distance	765	3	0.002396959364414215
-unset (assemblies)	isin distance	765	4	0.0023974854685366153
-unset (assemblies)	isin distance	765	5	0.0023978009168058633
-unset (assemblies)	isin distance	765	6	0.0023977618478238584
-unset (assemblies)	isin distance	765	7	0.002400763798505068
-unset (assemblies)	isin distance	765	8	0.0023977112397551535
-unset (assemblies)	isin distance	765	9	0.00239672495983541
-unset (assemblies)	isin distance	765	10	0.002397699160501361
-unset (assemblies)	isin mrca	765	1	0.0006851796489208936
-unset (assemblies)	isin mrca	765	2	0.0006849514823406935
-unset (assemblies)	isin mrca	765	3	0.0006847954811528325
-unset (assemblies)	isin mrca	765	4	0.0006865456523373723
-unset (assemblies)	isin mrca	765	5	0.0006848525255918503
-unset (assemblies)	isin mrca	765	6	0.0006850768225267529
-unset (assemblies)	isin mrca	765	7	0.000685297004878521
-unset (assemblies)	isin mrca	765	8	0.0006851732041686774
-unset (assemblies)	isin mrca	765	9	0.0006852098032832146
-unset (assemblies)	isin mrca	765	10	0.0006888309838250279
+Name	Kind	Number samples	Number features	Number executions	Iteration	Time
+unset (assemblies)	db.samples_query	59	816	200	1	0.0016258780471980572
+unset (assemblies)	db.samples_query	59	816	200	2	0.0016314427135512232
+unset (assemblies)	db.samples_query	59	816	200	3	0.0016306260833516717
+unset (assemblies)	db.samples_query	59	816	200	4	0.0016276499396190047
+unset (assemblies)	db.samples_query	59	816	200	5	0.0016284574009478093
+unset (assemblies)	db.samples_query	59	816	200	6	0.0016249324707314373
+unset (assemblies)	db.samples_query	59	816	200	7	0.0016227501723915338
+unset (assemblies)	db.samples_query	59	816	200	8	0.001624777833931148
+unset (assemblies)	db.samples_query	59	816	200	9	0.001679079788736999
+unset (assemblies)	db.samples_query	59	816	200	10	0.001625587367452681
+unset (assemblies)	q.join	59	816	100	1	0.0021381961833685636
+unset (assemblies)	q.join	59	816	100	2	0.002135425116866827
+unset (assemblies)	q.join	59	816	100	3	0.002133199004456401
+unset (assemblies)	q.join	59	816	100	4	0.002137607568874955
+unset (assemblies)	q.join	59	816	100	5	0.0021316910348832606
+unset (assemblies)	q.join	59	816	100	6	0.002138303238898516
+unset (assemblies)	q.join	59	816	100	7	0.0021321377344429493
+unset (assemblies)	q.join	59	816	100	8	0.002133603012189269
+unset (assemblies)	q.join	59	816	100	9	0.0021366277523338795
+unset (assemblies)	q.join	59	816	100	10	0.0021368985157459975
+unset (assemblies)	q.features_summary	59	816	5	1	0.05232603866606951
+unset (assemblies)	q.features_summary	59	816	5	2	0.052218936197459695
+unset (assemblies)	q.features_summary	59	816	5	3	0.05214641895145178
+unset (assemblies)	q.features_summary	59	816	5	4	0.05205812081694603
+unset (assemblies)	q.features_summary	59	816	5	5	0.05214673224836588
+unset (assemblies)	q.features_summary	59	816	5	6	0.05255169365555048
+unset (assemblies)	q.features_summary	59	816	5	7	0.05226905923336744
+unset (assemblies)	q.features_summary	59	816	5	8	0.05262788515537977
+unset (assemblies)	q.features_summary	59	816	5	9	0.052374291233718395
+unset (assemblies)	q.features_summary	59	816	5	10	0.052427900955080986
+unset (assemblies)	q.features_comparison	59	816	5	1	0.05939005073159933
+unset (assemblies)	q.features_comparison	59	816	5	2	0.0614177143201232
+unset (assemblies)	q.features_comparison	59	816	5	3	0.05949518755078316
+unset (assemblies)	q.features_comparison	59	816	5	4	0.05953672472387552
+unset (assemblies)	q.features_comparison	59	816	5	5	0.05956082865595817
+unset (assemblies)	q.features_comparison	59	816	5	6	0.059281063824892045
+unset (assemblies)	q.features_comparison	59	816	5	7	0.05920268632471561
+unset (assemblies)	q.features_comparison	59	816	5	8	0.059456815384328364
+unset (assemblies)	q.features_comparison	59	816	5	9	0.05935730896890164
+unset (assemblies)	q.features_comparison	59	816	5	10	0.05916220024228096
+unset (assemblies)	q.hasa	59	816	500	1	0.0008984155897051096
+unset (assemblies)	q.hasa	59	816	500	2	0.0008985952883958817
+unset (assemblies)	q.hasa	59	816	500	3	0.0008982329331338406
+unset (assemblies)	q.hasa	59	816	500	4	0.0009003716334700585
+unset (assemblies)	q.hasa	59	816	500	5	0.0008980002719908952
+unset (assemblies)	q.hasa	59	816	500	6	0.0009061200357973575
+unset (assemblies)	q.hasa	59	816	500	7	0.0009017737582325935
+unset (assemblies)	q.hasa	59	816	500	8	0.0008988274913281203
+unset (assemblies)	q.hasa	59	816	500	9	0.0009003657810389995
+unset (assemblies)	q.hasa	59	816	500	10	0.0008995240777730941
+unset (assemblies)	q.isa	59	816	1000	1	0.0003981055626645684
+unset (assemblies)	q.isa	59	816	1000	2	0.0003925203448161483
+unset (assemblies)	q.isa	59	816	1000	3	0.00039284734800457957
+unset (assemblies)	q.isa	59	816	1000	4	0.00039273909665644166
+unset (assemblies)	q.isa	59	816	1000	5	0.00039286449924111366
+unset (assemblies)	q.isa	59	816	1000	6	0.0003929237155243754
+unset (assemblies)	q.isa	59	816	1000	7	0.0003928559683263302
+unset (assemblies)	q.isa	59	816	1000	8	0.0003931000679731369
+unset (assemblies)	q.isa	59	816	1000	9	0.0003928880114108324
+unset (assemblies)	q.isa	59	816	1000	10	0.0004008893305435777
+unset (assemblies)	q.isin (distance)	59	816	100	1	0.0022277980577200653
+unset (assemblies)	q.isin (distance)	59	816	100	2	0.0022064806055277584
+unset (assemblies)	q.isin (distance)	59	816	100	3	0.0022098093573004007
+unset (assemblies)	q.isin (distance)	59	816	100	4	0.002275623120367527
+unset (assemblies)	q.isin (distance)	59	816	100	5	0.0022067747078835962
+unset (assemblies)	q.isin (distance)	59	816	100	6	0.0023090206272900105
+unset (assemblies)	q.isin (distance)	59	816	100	7	0.002217092700302601
+unset (assemblies)	q.isin (distance)	59	816	100	8	0.0022085349727422
+unset (assemblies)	q.isin (distance)	59	816	100	9	0.002237584786489606
+unset (assemblies)	q.isin (distance)	59	816	100	10	0.0022903045173734426
+unset (assemblies)	q.isin (mrca)	59	816	500	1	0.000631512600928545
+unset (assemblies)	q.isin (mrca)	59	816	500	2	0.0006306951884180308
+unset (assemblies)	q.isin (mrca)	59	816	500	3	0.0006406729444861412
+unset (assemblies)	q.isin (mrca)	59	816	500	4	0.0006333157233893871
+unset (assemblies)	q.isin (mrca)	59	816	500	5	0.0006307303495705128
+unset (assemblies)	q.isin (mrca)	59	816	500	6	0.0006305392850190401
+unset (assemblies)	q.isin (mrca)	59	816	500	7	0.0006297724861651659
+unset (assemblies)	q.isin (mrca)	59	816	500	8	0.0006298033613711595
+unset (assemblies)	q.isin (mrca)	59	816	500	9	0.0006307112481445074
+unset (assemblies)	q.isin (mrca)	59	816	500	10	0.0006308444589376449
+unset (assemblies)	q AND r	59	816	20000	1	1.9437011796981097e-05
+unset (assemblies)	q AND r	59	816	20000	2	1.939491108059883e-05
+unset (assemblies)	q AND r	59	816	20000	3	1.9393918057903647e-05
+unset (assemblies)	q AND r	59	816	20000	4	1.93272169213742e-05
+unset (assemblies)	q AND r	59	816	20000	5	1.9315797789022328e-05
+unset (assemblies)	q AND r	59	816	20000	6	1.9327301904559135e-05
+unset (assemblies)	q AND r	59	816	20000	7	1.9362641824409367e-05
+unset (assemblies)	q AND r	59	816	20000	8	1.933553162962198e-05
+unset (assemblies)	q AND r	59	816	20000	9	1.9399485783651473e-05
+unset (assemblies)	q AND r	59	816	20000	10	1.936587356030941e-05
+unset (assemblies)	q.toframe	59	816	100	1	0.003302145767956972
+unset (assemblies)	q.toframe	59	816	100	2	0.003321653986349702
+unset (assemblies)	q.toframe	59	816	100	3	0.0032998045161366464
+unset (assemblies)	q.toframe	59	816	100	4	0.003305415287613869
+unset (assemblies)	q.toframe	59	816	100	5	0.0033437316957861184
+unset (assemblies)	q.toframe	59	816	100	6	0.003409150568768382
+unset (assemblies)	q.toframe	59	816	100	7	0.003341620601713657
+unset (assemblies)	q.toframe	59	816	100	8	0.0033036924712359903
+unset (assemblies)	q.toframe	59	816	100	9	0.0033008010126650334
+unset (assemblies)	q.toframe	59	816	100	10	0.003300761040300131
+unset (assemblies)	q.summary	59	816	1000	1	0.00034497567266225817
+unset (assemblies)	q.summary	59	816	1000	2	0.0003457329794764519
+unset (assemblies)	q.summary	59	816	1000	3	0.0003432548763230443
+unset (assemblies)	q.summary	59	816	1000	4	0.00034316897485405206
+unset (assemblies)	q.summary	59	816	1000	5	0.00034443547017872335
+unset (assemblies)	q.summary	59	816	1000	6	0.00035562336165457966
+unset (assemblies)	q.summary	59	816	1000	7	0.0003445282923057675
+unset (assemblies)	q.summary	59	816	1000	8	0.00034442052152007817
+unset (assemblies)	q.summary	59	816	1000	9	0.00034845572616904976
+unset (assemblies)	q.summary	59	816	1000	10	0.0003591364752501249

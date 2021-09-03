@@ -2,3 +2,6 @@
 /simulated_data
 /index-reads
 /index-assemblies
+/simulations
+/snakemake*
+/log*
