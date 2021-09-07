@@ -30,7 +30,7 @@ find input/ | xargs sha256sum >> sha256.input
 
 I currently need every genome to be a separate fasta file to analyze the data in my software. So I need to extract all genomes into separate fasta files.
 
-Run `extract-sequences.ipynb`
+Run `1-subset-sequences.ipynb`
 
 # 3. Create index
 
