@@ -1,0 +1,3 @@
+cases_dir: 'cases/case-500'
+iterations: 3
+number_samples: 500
