@@ -32,6 +32,10 @@ I currently need every genome to be a separate fasta file to analyze the data in
 
 Run `1-subset-sequences.ipynb`
 
+# 3. Update pangolin lineages
+
+To update pangolin lineages run `2-pangolin-lineages.ipynb`
+
 # 3. Create index
 
 Run the following:
