@@ -227,7 +227,7 @@ class IndexBenchmarker:
 
         index_input_file = self._get_and_validate_index_input(expected_number_samples=self._number_samples)
         index_cmd = (
-            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf"
+            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf-kmer"
             f" --reference-file {self._reference_file} {index_input_file}"
         )
         print(f"Index running: [{index_cmd}]")
