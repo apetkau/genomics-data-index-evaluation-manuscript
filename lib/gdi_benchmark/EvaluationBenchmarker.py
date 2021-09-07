@@ -18,7 +18,8 @@ class QueryBenchmarkHandler:
     def __init__(self):
         pass
 
-    def _benchmark_to_df(self, name: str, kind: str, iteration: int, number_samples: int, number_features: int, benchmark_query) -> pd.DataFrame:
+    def _benchmark_to_df(self, name: str, kind: str, iteration: int, number_samples: int, number_features_no_unknown: int, number_features_all: int,
+            benchmark_query) -> pd.DataFrame:
         benchmark_query_results = benchmark_query.get_first_iteration()
 
         df = pd.DataFrame(data={
@@ -26,7 +27,8 @@ class QueryBenchmarkHandler:
             'Kind': [kind],
             'Iteration': [iteration],
             'Number samples': [int(number_samples)],
-            'Number features': [int(number_features)],
+            'Number features (no unknown)': [int(number_features_no_unknown)],
+            'Number features (all)': [int(number_features_all)],
             'Runtime': [float(benchmark_query_results['process']['execution_time'])],
             'Memory (max)': [float(benchmark_query_results['memory']['max'])],
             'Mmemory (max/process)': [float(benchmark_query_results['memory']['max_perprocess'])],
@@ -34,20 +36,22 @@ class QueryBenchmarkHandler:
 
         return df
 
-    def benchmark_cli(self, name: str, kind_commands: Dict[str, str], number_samples: int, number_features: int, iterations: int) -> pd.DataFrame:
+    def benchmark_cli(self, name: str, kind_commands: Dict[str, str], number_samples: int, number_features_no_unknown: int, number_features_all: int, 
+            iterations: int) -> pd.DataFrame:
         results = []
         for kind in kind_commands:
             command = kind_commands[kind]
             for iteration in range(iterations):
                 benchmark_query = cmdbench.benchmark_command(command, iterations_num = 1)
                 kind_iteration_df = self._benchmark_to_df(name=name, kind=kind, iteration=iteration+1, number_samples=number_samples,
-                                                          number_features=number_features, benchmark_query=benchmark_query)
+                                                          number_features_no_unknown=number_features_no_unknown,
+                                                          number_features_all=number_features_all, benchmark_query=benchmark_query)
                 results.append(kind_iteration_df)
         return pd.concat(results)
 
     
     def benchmark_api(self, name: str, kind_functions: Dict[str, Callable[[Any], Any]], number_samples: int, 
-            number_features: int, repeat: int) -> pd.DataFrame:
+            number_features_no_unknown: int, number_features_all: int, repeat: int) -> pd.DataFrame:
         results = []
         for kind in kind_functions:
             func = kind_functions[kind]
@@ -56,20 +60,22 @@ class QueryBenchmarkHandler:
             result = timer.repeat(repeat=repeat, number=number_loops)
             result = list(map(lambda x: x/number_loops, result)) # Convert to time per single execution
             df = self._create_timing_df_single_case(result, name=name, kind=kind, number_samples=number_samples,
-                    number_features=number_features, number_loops=number_loops)
+                    number_features_no_unknown=number_features_no_unknown, number_features_all=number_features_all, number_loops=number_loops)
             results.append(df)
 
         return pd.concat(results)
 
 
     def _create_timing_df_single_case(self, timings: List[float], name: str, kind: str,
-                                      number_samples: int, number_features: int, number_loops: int) -> pd.DataFrame:
+                                      number_samples: int, number_features_no_unknown: int,
+                                      number_features_all: int, number_loops: int) -> pd.DataFrame:
         iterations = len(timings)
         return pd.DataFrame({
             'Name': [name]*iterations,
             'Kind': [kind]*iterations,
             'Number samples': [number_samples]*iterations,
-            'Number features': [number_features]*iterations,
+            'Number features (no unknown)': [number_features_no_unknown]*iterations,
+            'Number features (all)': [number_features_all]*iterations,
             'Number executions': number_loops,
             'Iteration': range(1, iterations + 1),
             'Time': timings,
