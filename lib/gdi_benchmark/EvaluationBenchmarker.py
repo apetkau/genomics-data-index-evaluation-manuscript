@@ -100,6 +100,10 @@ class BenchmarkResultsHandler:
         db = gdi.GenomicsDataIndex.connect(index_path)
         index_size = db.db_size(unit='B').set_index('Type').loc['Total']['Data Size (B)']
 
+        reference_name = db.reference_names()[0]
+        number_features_all = db.count_mutations(reference_genome=reference_name, include_unknown=True)
+        number_features_no_unknown = db.count_mutations(reference_genome=reference_name, include_unknown=False)
+
         tree_runtime = float(tree_data['process']['execution_time']) if tree_data is not None else pd.NA
         tree_memory_max = float(tree_data['memory']['max']) if tree_data is not None else pd.NA
         tree_memory_max_proc = float(tree_data['memory']['max_perprocess']) if tree_data is not None else pd.NA
@@ -108,6 +112,8 @@ class BenchmarkResultsHandler:
             'Name': [self._name],
             'Iteration': [iteration],
             'Number samples': [int(number_samples)],
+            'Number features (all)': [number_features_all],
+            'Number features (no unknown)': [number_features_no_unknown],
             'Number cores': [ncores],
             'Reference length': [reference_length],
             'Analysis runtime': [float(analysis_data['process']['execution_time'])],
