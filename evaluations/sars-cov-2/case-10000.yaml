@@ -1,3 +1,4 @@
 cases_dir: 'cases/case-10000'
 iterations: 3
 number_samples: 10000
+build_tree: False
