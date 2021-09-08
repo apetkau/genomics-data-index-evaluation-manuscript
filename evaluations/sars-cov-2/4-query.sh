@@ -1,11 +1,23 @@
 #!/bin/sh
 
-#for case_file in case-10.yaml case-20.yaml case-50.yaml case-100.yaml case-200.yaml case-500.yaml case-1000.yaml case-2000.yaml case-5000.yaml case-10000.yaml;
-#for case_file in case-10.yaml case-20.yaml case-50.yaml;
-for case_file in case-200.yaml;
-do
-	name=`basename $case_file .yaml`
-	d=`date | tr -d '\n'`
-	echo "$d: query comparison $case_file"
-	papermill template-4-query.ipynb 4-query.${name}.ipynb -f $case_file
+for case_dir in cases/case-*;
+do        
+	name=`basename $case_dir`
+	case_file=${name}.yaml
+	index_info=$case_dir/index-info.tsv
+	query_cli=$case_dir/query-cli.tsv
+
+	if [ -e $index_info ];
+	then
+		if [ -e $query_cli ];
+		then
+			echo "Already ran queries for case $case_dir, skipping"
+		else
+			d=`date | tr -d '\n'`
+			echo "$d: query comparison $case_file"
+			papermill template-4-query.ipynb 4-query.${name}.ipynb -f $case_file
+		fi
+	else
+		echo "case $case_dir is not completed yet"
+	fi
 done
