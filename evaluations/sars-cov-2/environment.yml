@@ -1,11 +1,11 @@
 name: gdi-sars-cov-2
 channels:
   - conda-forge
+  - r
   - bioconda
   - defaults
 dependencies:
   - jupyterlab
-  - nbconvert
   - bioconductor-rhtslib
   - python=3.8
   - r-irkernel
@@ -18,11 +18,15 @@ dependencies:
   - pyqt
   - bedtools
   - iqtree
-  - bcftools
   - htslib
-  - sqlalchemy>=1.4
+  - sqlalchemy[version='>=1.4']
   - snpeff
   - pip
+  - papermill
+  - ca-certificates
+  - certifi
+  - openssl
+  - seaborn
   - pip:
     - genomics-data-index==0.2.0
     - cmdbench
