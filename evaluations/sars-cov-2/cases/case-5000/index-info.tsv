@@ -1,0 +1,4 @@
+Name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
+case-5000	1	5000	35646	5743	32	29903	1870.35	1314185216.0	537632768.0	4374360064.0	284.3	21835214848.0	1568083968.0	95203328.0				2154.65	21835214848.0
+case-5000	2	5000	35646	5743	32	29903	1849.24	1440206848.0	537296896.0	4374339584.0	280.74	21554413568.0	1550442496.0	95223808.0				2129.98	21554413568.0
+case-5000	3	5000	35646	5743	32	29903	1860.29	1514225664.0	537473024.0	4374319104.0	285.22	25650266112.0	1690411008.0	95186944.0				2145.51	25650266112.0
