@@ -31,3 +31,4 @@ dependencies:
     - genomics-data-index==0.2.0
     - cmdbench
     - jupyter_contrib_nbextensions
+    - colour
