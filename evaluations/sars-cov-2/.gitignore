@@ -6,3 +6,7 @@
 /index
 /cases
 /figures
+/sha256*
+/test-*
+/log.*
+/snakemake-*
