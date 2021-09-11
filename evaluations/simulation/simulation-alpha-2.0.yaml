@@ -1,0 +1,5 @@
+read_coverage: 30
+mincov: 10
+simulation_dir: 'simulations/alpha-2.0-cov-30'
+iterations: 3
+sub_alpha: 2.0
