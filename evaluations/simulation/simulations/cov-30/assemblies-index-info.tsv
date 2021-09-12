@@ -1,4 +1,4 @@
-Name	Iteration	Number samples	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
-cov-30 assemblies	1	59	32	10834	90.37	1214664704.0	377958400.0	2082598912.0	4.8	5779537920.0	238112768.0	1069056.0	94.21	241328128.0	224346112.0	189.38	5779537920.0
-cov-30 assemblies	2	59	32	10834	91.39	1217359872.0	380788736.0	2082594816.0	5.01	5781225472.0	237809664.0	1069056.0	79.43	241070080.0	224325632.0	175.83	5781225472.0
-cov-30 assemblies	3	59	32	10834	90.17	1193250816.0	377647104.0	2082590720.0	5.18	5787181056.0	238239744.0	1064960.0	71.84	240459776.0	223711232.0	167.19	5787181056.0
+Name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
+cov-30 assemblies	1	59	1350	1350	32	19699	92.82	1356533760.0	381353984.0	2084597760.0	6.42	5774872576.0	241217536.0	1355776.0	104.75	239722496.0	222732288.0	203.99	5774872576.0
+cov-30 assemblies	2	59	1350	1350	32	19699	94.26	1275654144.0	370290688.0	2084581376.0	6.51	5771075584.0	241123328.0	1355776.0	104.4	239808512.0	223064064.0	205.17000000000002	5771075584.0
+cov-30 assemblies	3	59	1350	1350	32	19699	93.56	1184604160.0	374407168.0	2084589568.0	6.15	5772419072.0	241582080.0	1355776.0	94.5	239091712.0	223068160.0	194.21	5772419072.0
