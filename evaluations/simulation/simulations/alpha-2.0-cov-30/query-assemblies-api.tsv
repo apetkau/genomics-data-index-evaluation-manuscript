@@ -1,0 +1,111 @@
+Name	Kind	Number samples	Number features (no unknown)	Number features (all)	Number executions	Iteration	Time
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	1	0.0016446130303665995
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	2	0.0016306287096813322
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	3	0.0016201116796582937
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	4	0.0016226010210812093
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	5	0.0016197203891351818
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	6	0.0016187416994944215
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	7	0.0016450881445780397
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	8	0.0016371578862890601
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	9	0.0016405592812225223
+alpha-2.0-cov-30 (assemblies)	db.samples_query	59	974	974	200	10	0.0016331823682412506
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	1	0.002173223737627268
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	2	0.002174459993839264
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	3	0.002170743765309453
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	4	0.002180424993857741
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	5	0.0021869953535497188
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	6	0.0021743089798837902
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	7	0.002203167472034693
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	8	0.002262303065508604
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	9	0.0022780142817646265
+alpha-2.0-cov-30 (assemblies)	q.join	59	974	974	100	10	0.0022870826348662374
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	1	0.06622311789542437
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	2	0.0664078714326024
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	3	0.06627328265458346
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	4	0.06881858371198177
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	5	0.06749165579676628
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	6	0.06656319238245487
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	7	0.06649032719433308
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	8	0.06640321910381317
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	9	0.06732556857168674
+alpha-2.0-cov-30 (assemblies)	q.features_summary	59	974	974	5	10	0.06695798616856337
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	1	0.07940830253064632
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	2	0.07622105740010739
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	3	0.07618494890630245
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	4	0.07814686242491006
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	5	0.07690569534897804
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	6	0.07719165105372668
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	7	0.0753547739237547
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	8	0.07521409150213003
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	9	0.07547587770968675
+alpha-2.0-cov-30 (assemblies)	q.features_comparison	59	974	974	5	10	0.07572626136243343
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	1	0.0009561860803514719
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	2	0.0009560961835086345
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	3	0.0009562106560915708
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	4	0.0009565937500447035
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	5	0.000960930772125721
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	6	0.0009552466850727796
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	7	0.0009552154615521431
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	8	0.0009555188398808241
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	9	0.0009544245935976506
+alpha-2.0-cov-30 (assemblies)	q.hasa	59	974	974	500	10	0.0009552307091653347
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	1	0.00041633401066064834
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	2	0.0004116056635975838
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	3	0.0004114782363176346
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	4	0.00041163875535130503
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	5	0.00041208541207015515
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	6	0.00041114626452326775
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	7	0.00041106505319476127
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	8	0.0004120968859642744
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	9	0.00041146046109497546
+alpha-2.0-cov-30 (assemblies)	q.isa	59	974	974	500	10	0.00041348342411220073
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	1	1.9606279255822302e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	2	1.950839888304472e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	3	1.9562133075669408e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	4	1.9535667775198817e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	5	1.9552884716540576e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	6	1.9516927376389502e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	7	1.9479886908084153e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	8	1.9455080898478626e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	9	1.9580764323472977e-05
+alpha-2.0-cov-30 (assemblies)	q AND r	59	974	974	20000	10	1.9500702619552613e-05
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	1	0.0034494341630488634
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	2	0.0033425714541226626
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	3	0.0033419352769851686
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	4	0.003349513243883848
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	5	0.003340372908860445
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	6	0.0033669229224324226
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	7	0.003343093115836382
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	8	0.0033375301491469144
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	9	0.0033401233609765767
+alpha-2.0-cov-30 (assemblies)	q.toframe	59	974	974	100	10	0.0033538399823009966
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	1	0.0003638573791831732
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	2	0.0003672663206234574
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	3	0.0003734918069094419
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	4	0.0003490728875622153
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	5	0.0003483218317851424
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	6	0.00035606366861611603
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	7	0.00035880348552018405
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	8	0.0003486761972308159
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	9	0.00034916489105671643
+alpha-2.0-cov-30 (assemblies)	q.summary	59	974	974	1000	10	0.00036371626611799004
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	1	0.0030996473878622055
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	2	0.003107602009549737
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	3	0.003111088974401355
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	4	0.003103191293776035
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	5	0.0031262369360774756
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	6	0.0030900814756751062
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	7	0.0030896040424704552
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	8	0.003115945253521204
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	9	0.003132541785016656
+alpha-2.0-cov-30 (assemblies)	q.isin (distance)	59	974	974	100	10	0.0031326848827302454
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	1	0.0008291582409292459
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	2	0.0008277960438281298
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	3	0.0008309562224894762
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	4	0.0008277713470160961
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	5	0.0008303874172270298
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	6	0.000830904733389616
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	7	0.0008288658894598484
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	8	0.0008306542783975601
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	9	0.0008286578971892595
+alpha-2.0-cov-30 (assemblies)	q.isin (mrca)	59	974	974	500	10	0.0008300879113376141
