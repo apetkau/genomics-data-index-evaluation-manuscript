@@ -163,7 +163,8 @@ class BenchmarkResultsHandler:
 class IndexBenchmarker:
     
     def __init__(self, benchmark_results_handler: BenchmarkResultsHandler,
-                       index_path: Path, input_files_file: Path, reference_file: Path, ncores: int, mincov: int = 5, build_tree: bool = False):
+                       index_path: Path, input_files_file: Path, reference_file: Path, ncores: int, mincov: int = 5, build_tree: bool = False,
+                       sample_batch_size: int = 2000):
         self._ncores = ncores
         self._mincov = mincov
         self._index_path = index_path
@@ -178,6 +179,7 @@ class IndexBenchmarker:
         
         input_df = pd.read_csv(input_files_file, sep='\t')
         self._number_samples = len(input_df)
+        self._sample_batch_size = sample_batch_size
 
     def _get_and_validate_index_input(self, expected_number_samples):
         snakemake_dirs = glob.glob('snakemake*')
@@ -240,7 +242,7 @@ class IndexBenchmarker:
         index_input_file = self._get_and_validate_index_input(expected_number_samples=self._number_samples)
         index_cmd = (
             f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf-kmer"
-            f" --reference-file {self._reference_file} {index_input_file}"
+            f" --sample-batch-size {self._sample_batch_size} --reference-file {self._reference_file} {index_input_file}"
         )
         print(f"Index running: [{index_cmd}]")
         before_time = time.time()
