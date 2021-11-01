@@ -29,3 +29,4 @@ dependencies:
   - udunits2
   - r-sf
   - seaborn
+  - mamba

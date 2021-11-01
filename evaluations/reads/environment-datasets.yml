@@ -1,0 +1,13 @@
+name: gdi-reads-datasets
+channels:
+  - conda-forge
+  - r
+  - bioconda
+  - defaults
+dependencies:
+  - mamba
+  - perl
+  - make
+  - sra-tools
+  - entrez-direct
+  - wget
