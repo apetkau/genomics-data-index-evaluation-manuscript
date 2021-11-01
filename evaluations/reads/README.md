@@ -63,3 +63,54 @@ GenFSGopher.pl --outdir Salmonella_enterica_1203NYJAP-1 --layout byformat --numc
 ```
 
 Repeat the same for `datasets/Escherichia_coli_1405WAEXK-1.tsv` and `datasets/Listeria_monocytogenes_1408MLGX6-3WGS.tsv`.
+
+## 1.4. Cosolidate all reads
+
+I prepared a directory with all reads and one with all genbank files (reference genomes).
+
+### 1.4.1. Reads
+
+Make sure you are in the `reads/data` directory.
+
+```bash
+mkdir fastq
+pushd fastq
+ln -s ../datasets/Campylobacter_jejuni_0810PADBR-1/reads/*.fastq.gz .
+ln -s ../datasets/Escherichia_coli_1405WAEXK-1/reads/*.fastq.gz .
+ln -s ../datasets/Listeria_monocytogenes_1408MLGX6-3WGS/reads/*.fastq.gz .
+ln -s ../datasets/Salmonella_enterica_1203NYJAP-1/reads/*.fastq.gz .
+popd
+```
+
+### 1.4.2. Reference genomes
+
+Each of these was downloaded by looking at the `datasets/datasets/*.tsv` file for the reference genome in the column **suggestedReference**. I searched for these on NCBI. Some of the reference genomes have been updated since the tsv files were written. I downloaded the latest version by looking for the **FTP directory for RefSeq assembly** link on NCBI and downloading the `.gbff.gz` file.
+
+```bash
+mkdir reference
+cd reference
+
+mkdir campylobacter
+pushd campylobacter
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/879/185/GCA_001879185.2_ASM187918v2/GCA_001879185.2_ASM187918v2_genomic.gbff.gz
+mv GCA_001879185.2_ASM187918v2_genomic.gbff.gz GCA_001879185.2_ASM187918v2_genomic.gbk.gz
+popd
+
+mkdir listeria
+pushd listeria
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/047/715/GCF_001047715.2_ASM104771v2/GCF_001047715.2_ASM104771v2_genomic.gbff.gz
+mv GCF_001047715.2_ASM104771v2_genomic.gbff.gz GCF_001047715.2_ASM104771v2_genomic.gbk.gz
+popd
+
+mkdir ecoli
+pushd ecoli
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/703/365/GCF_000703365.1_Ec2011C-3609/GCF_000703365.1_Ec2011C-3609_genomic.gbff.gz
+mv GCF_000703365.1_Ec2011C-3609_genomic.gbff.gz GCF_000703365.1_Ec2011C-3609_genomic.gbk.gz
+popd
+
+mkdir salmonella
+pushd salmonella
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/439/415/GCF_000439415.1_ASM43941v1/GCF_000439415.1_ASM43941v1_genomic.gbff.gz
+mv GCF_000439415.1_ASM43941v1_genomic.gbff.gz GCF_000439415.1_ASM43941v1_genomic.gbk.gz
+popd
+```

@@ -11,3 +11,4 @@ dependencies:
   - sra-tools
   - entrez-direct
   - wget
+  - ncbi-genome-download
