@@ -30,3 +30,6 @@ dependencies:
   - r-sf
   - seaborn
   - mamba
+  - pip
+  - pip:
+    - genomics-data-index
