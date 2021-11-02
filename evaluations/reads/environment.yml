@@ -33,3 +33,4 @@ dependencies:
   - pip
   - pip:
     - genomics-data-index
+    - cmdbench

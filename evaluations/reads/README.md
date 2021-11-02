@@ -64,25 +64,15 @@ GenFSGopher.pl --outdir Salmonella_enterica_1203NYJAP-1 --layout byformat --numc
 
 Repeat the same for `datasets/Escherichia_coli_1405WAEXK-1.tsv` and `datasets/Listeria_monocytogenes_1408MLGX6-3WGS.tsv`.
 
-## 1.4. Cosolidate all reads
+## 1.4. Fix and cosolidate all reads
 
-I prepared a directory with all reads and one with all genbank files (reference genomes).
+Some read-pairs differ in their names in that they have `_forward` and `_reverse` in the identifiers, which causes issues when running snippy. I need to strip all these out. This is done with the following notebook:
 
-### 1.4.1. Reads
+* `1-fix-reads.ipynb`
 
-Make sure you are in the `reads/data` directory.
+This outputs all gzipped fastq files to a directory `data/fastq`.
 
-```bash
-mkdir fastq
-pushd fastq
-ln -s ../datasets/Campylobacter_jejuni_0810PADBR-1/reads/*.fastq.gz .
-ln -s ../datasets/Escherichia_coli_1405WAEXK-1/reads/*.fastq.gz .
-ln -s ../datasets/Listeria_monocytogenes_1408MLGX6-3WGS/reads/*.fastq.gz .
-ln -s ../datasets/Salmonella_enterica_1203NYJAP-1/reads/*.fastq.gz .
-popd
-```
-
-### 1.4.2. Reference genomes
+# 1.5. Reference genomes
 
 Each of these was downloaded by looking at the `datasets/datasets/*.tsv` file for the reference genome in the column **suggestedReference**. I searched for these on NCBI. Some of the reference genomes have been updated since the tsv files were written. I downloaded the latest version by looking for the **FTP directory for RefSeq assembly** link on NCBI and downloading the `.gbff.gz` file.
 
@@ -114,3 +104,9 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/439/415/GCF_000439415.1_AS
 mv GCF_000439415.1_ASM43941v1_genomic.gbff.gz GCF_000439415.1_ASM43941v1_genomic.gbk.gz
 popd
 ```
+
+## 1.6. Create metadata table
+
+Next, I create a combined metadata table with all samples using:
+
+* `2-create-input-list.ipynb`
