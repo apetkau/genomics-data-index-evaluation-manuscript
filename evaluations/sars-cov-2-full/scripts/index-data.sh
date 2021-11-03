@@ -4,6 +4,8 @@ SNAPSHOT_DIR=snapshots
 INDEX=index
 ncores=32
 
+gdi --version
+
 counter=0
 for i in input/input-split/*.tsv
 do
