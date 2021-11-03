@@ -12,7 +12,7 @@ do
 	b=`basename $i .tsv`
 
 	echo "\n"
-        if [ $(($counter % 2)) -eq 0 ]
+        if [ $(($counter % 5)) -eq 0 ]
 	then
 		snapshot="${SNAPSHOT_DIR}/index_${b}"
 		echo "Making snapshot $snapshot on `date | tr -d '\n'`"

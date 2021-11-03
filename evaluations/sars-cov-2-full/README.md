@@ -18,6 +18,13 @@ wget https://data.nextstrain.org/files/ncov/open/metadata.tsv.gz
 gdi input-split-file --output-dir fasta --output-samples-file input.tsv --absolute sequences.fasta.xz
 ```
 
+## 2.1. Randomize order of genomes to load
+
+```bash
+head -n 1 input.tsv > input-shuffled.tsv
+tail -n+2 input.tsv | shuf >> input-shuffled.tsv
+```
+
 # 4. Split input file into chunks
 
 ```bash
@@ -27,12 +34,12 @@ cd input-split
 
 # Split file into pieces of size 2000 but keep header
 # From https://stackoverflow.com/a/53062251
-cat ../input.tsv | parallel --header : --pipe -N2000 'cat >{#}_input-split.tsv'
+cat ../input-shuffled.tsv | parallel --header : --pipe -N2000 'cat >{#}_input-split.tsv'
 
 
 # Add leading 0s to numbers in file names so it's easier to sort in numerical order
-prename 's/^(\d)_/00\1_/' *.tsv
-prename 's/^(\d\d)_/0\1_/' *.tsv
+prename 's/^(\d)_/000\1_/' *.tsv
+prename 's/^(\d\d)_/00\1_/' *.tsv
 prename 's/^(\d\d\d)_/0\1_/' *.tsv
 ```
 
