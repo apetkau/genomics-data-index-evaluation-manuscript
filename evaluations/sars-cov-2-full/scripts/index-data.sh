@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SNAPSHOT_DIR=snapshots
 INDEX=index
@@ -6,13 +6,17 @@ ncores=32
 
 gdi --version
 
-counter=0
-for i in input/input-split/*.tsv
+#counter=0
+counter=1
+#for i in input/input-split/*.tsv
+for j in {031..1051};
 do
+	i="input/input-split/${j}_input-split.tsv"
 	b=`basename $i .tsv`
 
-	echo "\n"
-        if [ $(($counter % 5)) -eq 0 ]
+	echo -e "\n"
+        #if [ $(($counter % 5)) -eq 0 ]
+        if [ $(($counter % 30)) -eq 0 ]
 	then
 		snapshot="${SNAPSHOT_DIR}/index_${b}"
 		echo "Making snapshot $snapshot on `date | tr -d '\n'`"
