@@ -14,8 +14,7 @@ do
 	b=`basename $i .tsv`
 
 	echo -e "\n"
-        #if [ $(($counter % 5)) -eq 0 ]
-        if [ $(($counter % 30)) -eq 0 ]
+        if [ $(($counter % 10)) -eq 0 ]
 	then
 		snapshot="${SNAPSHOT_DIR}/index_${b}.tar.gz"
 		echo "Making snapshot $snapshot on `date | tr -d '\n'`"
