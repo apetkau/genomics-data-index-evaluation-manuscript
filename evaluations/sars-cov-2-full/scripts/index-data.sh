@@ -6,10 +6,9 @@ ncores=32
 
 gdi --version
 
-#counter=0
-counter=1
+counter=0
 #for i in input/input-split/*.tsv
-for j in {090..1051};
+for j in {0119..1051};
 do
 	i="input/input-split/${j}_input-split.tsv"
 	b=`basename $i .tsv`
@@ -18,9 +17,9 @@ do
         #if [ $(($counter % 5)) -eq 0 ]
         if [ $(($counter % 30)) -eq 0 ]
 	then
-		snapshot="${SNAPSHOT_DIR}/index_${b}"
+		snapshot="${SNAPSHOT_DIR}/index_${b}.tar.gz"
 		echo "Making snapshot $snapshot on `date | tr -d '\n'`"
-		cp -r "$INDEX" "$snapshot"
+		tar -czf "$snapshot" "$INDEX"
 		echo "Finished making snapshot $snapshot on `date | tr -d '\n'`"
 	else
 		echo "Skipping snapshot for $i on `date | tr -d '\n'`"
