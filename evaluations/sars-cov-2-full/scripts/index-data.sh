@@ -7,10 +7,8 @@ ncores=32
 gdi --version
 
 counter=0
-#for i in input/input-split/*.tsv
-for j in {0919..1051};
+for i in input/input-split/*.tsv
 do
-	i="input/input-split/${j}_input-split.tsv"
 	b=`basename $i .tsv`
 
 	echo -e "\n"
