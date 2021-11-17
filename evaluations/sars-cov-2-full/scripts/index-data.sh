@@ -8,7 +8,7 @@ gdi --version
 
 counter=0
 #for i in input/input-split/*.tsv
-for j in {0119..1051};
+for j in {0919..1051};
 do
 	i="input/input-split/${j}_input-split.tsv"
 	b=`basename $i .tsv`
