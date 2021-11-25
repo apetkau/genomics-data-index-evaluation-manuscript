@@ -274,3 +274,138 @@ class IndexBenchmarker:
                                                        reference_length=self._reference_length)
          
         return benchmark_df
+
+
+class IndexBenchmarkerMultiple:
+    
+    def __init__(self, index_path: Path, input_files_files: Dict[str, Path], reference_files: Dict[str, Path],
+                 ncores: int, mincov: int = 5, build_tree: bool = False, sample_batch_size: int = 2000):
+        self._ncores = ncores
+        self._mincov = mincov
+        self._index_path = index_path
+        self._input_files_files = input_files_files
+        self._reference_files = reference_files
+        self._build_tree = build_tree
+        self._sample_batch_size = sample_batch_size
+
+    def _get_reference_length(self, reference_file: Path) -> int:
+        reference_name, records = SequenceFile(reference_file).parse_sequence_file()
+        reference_length = 0
+        for record in records:
+            reference_length = reference_length + len(record)
+
+        return reference_length
+
+    def _get_reference_name(self, reference_file: Path) -> int:
+        reference_name, records = SequenceFile(reference_file).parse_sequence_file()
+        return reference_name
+
+    def _get_number_samples(self, input_files_file: Path) -> int:
+        input_df = pd.read_csv(input_files_file, sep='\t')
+        return len(input_df)
+
+    def _get_and_validate_index_input(self, expected_number_samples):
+        snakemake_dirs = glob.glob('snakemake*')
+        if len(snakemake_dirs) == 1:
+            snakemake_dir = snakemake_dirs[0]
+        else:
+            raise Exception(f'Invalid number of snakemake directories: {snakemake_dirs}')
+
+        vcf_input_file = (Path(snakemake_dir) / 'gdi-input.fofn').absolute()
+
+        if not vcf_input_file.exists():
+            raise Exception(f'VCF input file {vcf_input_file} does not exist')
+
+        vcf_df = pd.read_csv(vcf_input_file, sep='\t')
+        actual_number_samples = len(vcf_df)
+
+        assert expected_number_samples == actual_number_samples, f'expected={expected_number_samples} != actual={actual_number_samples}'
+
+        return vcf_input_file
+
+    def benchmark(self, iterations: int = 1) -> pd.DataFrame:
+        index_df_iterations = []
+        for iteration in range(1, iterations + 1):
+            self.clean_index()
+            for dataset_name in self._input_files_files:
+                input_files_file = self._input_files_files[dataset_name]
+                reference_file = self._reference_files[dataset_name]
+
+                dataset_df = self.build_index_analysis(name=dataset_name, input_files_file=input_files_file, reference_file=reference_file, iteration=iteration)
+                index_df_iterations.append(dataset_df)
+
+        return pd.concat(index_df_iterations)
+
+    def clean_index(self) -> None:
+        if self._index_path.exists():
+            print(f'Removing any existing indexes {self._index_path}')
+            rmtree(self._index_path)
+
+        create_index_cmd = f'gdi init {self._index_path}'
+        print(f'Creating new index: [{create_index_cmd}]')
+        before_time = time.time()
+        cmdbench.benchmark_command(create_index_cmd, iterations_num=1)
+        after_time = time.time()
+        print(f'Creating a new index took {(after_time - before_time):0.2f} seconds')
+
+    def build_index_analysis(self, name: str, input_files_file: Path, reference_file: Path, iteration: int) -> pd.DataFrame:
+        number_samples = self._get_number_samples(input_files_file)
+        reference_length = self._get_reference_length(reference_file)
+        reference_name = self._get_reference_name(reference_file)
+        benchmark_results_handler = BenchmarkResultsHandler(name=name)
+
+        print(f'\nIteration {iteration} of index/analysis of {number_samples} samples for reference={reference_file} with {self._ncores} cores')
+
+        snakemake_dirs = glob.glob('snakemake*')
+        print(f'Removing any extra snakemake directories: {snakemake_dirs}')
+        for d in snakemake_dirs:
+            rmtree(d)
+
+        analysis_cmd = (
+            f"gdi --project-dir {self._index_path} --ncores {self._ncores} analysis"
+            f" --use-conda --no-load-data --reference-file {reference_file}" 
+            f" --kmer-size 31 --kmer-size 51 --kmer-size 71 --include-kmer"
+            f" --reads-mincov {self._mincov}"
+            f" --input-structured-genomes-file {input_files_file}"
+        )
+        print(f"Analysis running: [{analysis_cmd}]")
+        before_time = time.time()
+        benchmark_analysis = cmdbench.benchmark_command(analysis_cmd, iterations_num=1)
+        after_time = time.time()
+        print(f'Analysis took {(after_time - before_time)/60:0.2f} minutes')
+
+        index_input_file = self._get_and_validate_index_input(expected_number_samples=number_samples)
+        index_cmd = (
+            f"gdi --project-dir {self._index_path} --ncores {self._ncores} load vcf-kmer"
+            f" --sample-batch-size {self._sample_batch_size} --reference-file {reference_file} {index_input_file}"
+        )
+        print(f"Index running: [{index_cmd}]")
+        before_time = time.time()
+        benchmark_index = cmdbench.benchmark_command(index_cmd, iterations_num = 1)
+        after_time = time.time()
+        print(f'Indexing took {(after_time - before_time)/60:0.2f} minutes')
+
+        if self._build_tree:
+            build_cmd = (
+                f"gdi --project-dir {self._index_path} --ncores {self._ncores} rebuild tree"
+                f" --align-type full --extra-params '--fast -m GTR+F+R4' {reference_name}"
+            )
+            print(f"Building tree: [{build_cmd}]")
+            before_time = time.time()
+            benchmark_tree = cmdbench.benchmark_command(build_cmd, iterations_num = 1)
+            after_time = time.time()
+            print(f'Building tree took {(after_time - before_time)/60:0.2f} minutes')
+        else:
+            benchmark_tree = None
+
+        benchmark_df = benchmark_results_handler.benchmark_to_df(iteration=iteration,
+                                                       number_samples=number_samples,
+                                                       benchmark_analysis=benchmark_analysis,
+                                                       benchmark_index=benchmark_index,
+                                                       benchmark_tree=benchmark_tree,
+                                                       index_path=self._index_path,
+                                                       analysis_path=index_input_file.parent,
+                                                       ncores=self._ncores,
+                                                       reference_length=reference_length)
+         
+        return benchmark_df
