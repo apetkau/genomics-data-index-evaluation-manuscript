@@ -110,3 +110,11 @@ popd
 Next, I create a combined metadata table with all samples using:
 
 * `2-create-input-list.ipynb`
+
+# 2. Analysis
+
+To perform the analysis of all genomes I run the following:
+
+```bash
+papermill template-3-index-genomes.ipynb 3-index-genomes.ipynb
+```
