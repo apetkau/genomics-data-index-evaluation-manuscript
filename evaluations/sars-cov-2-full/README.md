@@ -2,7 +2,7 @@ Create a full index of all SARS-CoV-2 open data.
 
 # 1. Download SARS-CoV-2 open data
 
-Downloading data from <https://nextstrain.org/ncov/open/global> and placing into directory `input/`. Data downloaded as of November 11, 2021.
+Downloading data from <https://nextstrain.org/ncov/open/global> and placing into directory `input/`. Data downloaded as of January 29, 2022.
 
 ```bash
 mkdir input/
