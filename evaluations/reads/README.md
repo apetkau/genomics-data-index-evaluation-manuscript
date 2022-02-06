@@ -116,5 +116,9 @@ Next, I create a combined metadata table with all samples using:
 To perform the analysis of all genomes I run the following:
 
 ```bash
+mamba env create  --name gdi-reads --file environment.yml
+conda activate gdi-reads
+
 papermill template-3-index-genomes.ipynb 3-index-genomes.ipynb
 ```
+
