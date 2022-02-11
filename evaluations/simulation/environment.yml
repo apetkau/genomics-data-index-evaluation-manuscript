@@ -31,3 +31,4 @@ dependencies:
   - seaborn
   - pip:
     - genomics-data-index
+    - cmdbench

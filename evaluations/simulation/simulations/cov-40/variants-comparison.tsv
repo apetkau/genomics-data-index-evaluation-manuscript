@@ -1,3 +1,0 @@
-Name	True Positives	True Negatives	False Positives	False Negatives	Sensitivity	Specificity	Precision	F1 Score
-cov-40 reads	14972		675	1960	0.8842428537680133	~1 (not calculated)	0.9568607400779702	0.9191196783203904
-cov-40 assemblies	16762		0	170	0.9899598393574297	~1 (not calculated)	1.0	0.9949545913218971

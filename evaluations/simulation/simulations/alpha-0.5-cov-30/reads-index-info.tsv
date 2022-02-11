@@ -1,4 +1,0 @@
-Name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
-alpha-0.5-cov-30 reads	1	59	4462	2168	32	19699	125.85	2668658688.0	394375168.0	3303088128.0	8.12	5809979392.0	290533376.0	2678784.0	109.7	261222400.0	222740480.0	243.67000000000002	5809979392.0
-alpha-0.5-cov-30 reads	2	59	4462	2168	32	19699	105.02	2697170944.0	385716224.0	3303104512.0	7.73	5821202432.0	290889728.0	2678784.0	100.77	261804032.0	223105024.0	213.51999999999998	5821202432.0
-alpha-0.5-cov-30 reads	3	59	4462	2168	32	19699	101.6	2456666112.0	391593984.0	3303104512.0	8.22	5822681088.0	291368960.0	2678784.0	99.93	261754880.0	223051776.0	209.75	5822681088.0

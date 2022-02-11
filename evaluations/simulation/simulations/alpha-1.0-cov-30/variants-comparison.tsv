@@ -1,3 +1,0 @@
-Name	True Positives	True Negatives	False Positives	False Negatives	Sensitivity	Specificity	Precision	F1 Score
-alpha-1.0-cov-30 reads	34621		7179	17629	0.6626028708133971	~1 (not calculated)	0.8282535885167465	0.7362254120148857
-alpha-1.0-cov-30 assemblies	49552		0	2698	0.9483636363636364	~1 (not calculated)	1.0	0.9734975737215379

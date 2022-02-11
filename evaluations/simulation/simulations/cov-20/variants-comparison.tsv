@@ -1,3 +1,0 @@
-Name	True Positives	True Negatives	False Positives	False Negatives	Sensitivity	Specificity	Precision	F1 Score
-cov-20 reads	14401		666	2531	0.8505197259626742	~1 (not calculated)	0.9557974381097764	0.9000906278321198
-cov-20 assemblies	16762		0	170	0.9899598393574297	~1 (not calculated)	1.0	0.9949545913218971

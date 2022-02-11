@@ -7,12 +7,14 @@ ncores=32
 gdi --version
 
 counter=0
-for i in input/input-split/*.tsv
+#for i in input/input-split/*.tsv
+for n in {1286..1751}
 do
+	i="input/input-split/${n}_input-split.tsv"
 	b=`basename $i .tsv`
 
 	echo -e "\n"
-        if [ $(($counter % 10)) -eq 0 ]
+        if [ $(($counter % 60)) -eq 0 ]
 	then
 		snapshot="${SNAPSHOT_DIR}/index_${b}.tar.gz"
 		echo "Making snapshot $snapshot on `date | tr -d '\n'`"
