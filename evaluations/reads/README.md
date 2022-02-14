@@ -119,6 +119,6 @@ To perform the analysis of all genomes I run the following:
 mamba env create  --name gdi-reads --file environment.yml
 conda activate gdi-reads
 
-papermill template-3-index-genomes.ipynb 3-index-genomes.ipynb
+papermill --log-output template-3-index-genomes.ipynb 3-index-genomes.ipynb
 ```
 
