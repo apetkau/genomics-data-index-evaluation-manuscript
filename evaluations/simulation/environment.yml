@@ -29,6 +29,3 @@ dependencies:
   - udunits2
   - r-sf
   - seaborn
-  - pip:
-    - genomics-data-index
-    - cmdbench
