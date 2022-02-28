@@ -29,6 +29,7 @@ dependencies:
   - udunits2
   - r-sf
   - seaborn
+  - seqkit
   - mamba
   - pip
   - pip:
