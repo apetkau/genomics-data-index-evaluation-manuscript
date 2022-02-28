@@ -89,7 +89,7 @@ class BenchmarkResultsHandler:
     
     def benchmark_to_df(self, iteration: int, number_samples: int, benchmark_analysis, benchmark_index, benchmark_tree,
                     index_path: Path, analysis_path: Path,
-                    ncores: int, reference_length: int) -> pd.DataFrame:
+                    ncores: int, reference_length: int, reference_name: str = None) -> pd.DataFrame:
         analysis_data = benchmark_analysis.get_first_iteration()
         index_data = benchmark_index.get_first_iteration()
         tree_data = benchmark_tree.get_first_iteration() if benchmark_tree is not None else None
@@ -100,7 +100,9 @@ class BenchmarkResultsHandler:
         db = gdi.GenomicsDataIndex.connect(index_path)
         index_size = db.db_size(unit='B').set_index('Type').loc['Total']['Data Size (B)']
 
-        reference_name = db.reference_names()[0]
+        if reference_name is None:
+            reference_name = db.reference_names()[0]
+
         number_features_all = db.count_mutations(reference_genome=reference_name, include_unknown=True)
         number_features_no_unknown = db.count_mutations(reference_genome=reference_name, include_unknown=False)
 
@@ -110,6 +112,7 @@ class BenchmarkResultsHandler:
 
         df = pd.DataFrame(data={
             'Name': [self._name],
+            'Reference name': [reference_name],
             'Iteration': [iteration],
             'Number samples': [int(number_samples)],
             'Number features (all)': [number_features_all],
@@ -406,6 +409,7 @@ class IndexBenchmarkerMultiple:
                                                        index_path=self._index_path,
                                                        analysis_path=index_input_file.parent,
                                                        ncores=self._ncores,
-                                                       reference_length=reference_length)
+                                                       reference_length=reference_length,
+                                                       reference_name=reference_name)
          
         return benchmark_df
