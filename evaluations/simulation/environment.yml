@@ -1,13 +1,13 @@
 name: gdi-simulation
 channels:
   - conda-forge
-  - r
   - bioconda
   - defaults
+  - r
 dependencies:
   - r-ape
   - snpeff
-  - htslib
+  - htslib[version='>=1.13']
   - jupyterlab
   - matplotlib
   - pip
@@ -21,7 +21,7 @@ dependencies:
   - pymongo
   - iqtree
   - r-phangorn
-  - bcftools
+  - bcftools[version='>=1.13']
   - papermill
   - ca-certificates
   - certifi
@@ -29,3 +29,7 @@ dependencies:
   - udunits2
   - r-sf
   - seaborn
+  - minimap2==2.22
+  - setuptools=57
+  - samtools[version='>=1.13']
+  - bamtools
