@@ -5,5 +5,5 @@ do
 	name=`basename $case_file .yaml`
 	d=`date | tr -d '\n'`
 	echo "$d: analysis for $case_file"
-	papermill--log-output template-3-index-genomes.ipynb 3-index-genomes.${name}.ipynb -f $case_file
+	papermill --log-output template-3-index-genomes.ipynb 3-index-genomes.${name}.ipynb -f $case_file
 done
