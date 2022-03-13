@@ -1,34 +1,29 @@
 name: gdi-sars-cov-2
 channels:
   - conda-forge
-  - r
   - bioconda
   - defaults
+  - r
 dependencies:
-  - jupyterlab
-  - bioconductor-rhtslib
-  - python=3.8
-  - r-irkernel
-  - r-ape
-  - r-phytools
-  - r-phangorn
-  - pymongo
-  - bcftools
-  - matplotlib
-  - pyqt
-  - bedtools
-  - iqtree
-  - htslib
-  - sqlalchemy[version='>=1.4']
-  - snpeff
-  - pip
-  - papermill
-  - ca-certificates
-  - certifi
   - openssl
+  - iqtree
+  - python=3.8
   - seaborn
-  - pip:
-    - genomics-data-index==0.2.0
-    - cmdbench
-    - jupyter_contrib_nbextensions
-    - colour
+  - pymongo
+  - bedtools
+  - pyqt
+  - r-irkernel
+  - htslib
+  - pip
+  - snpeff
+  - r-phangorn
+  - certifi
+  - r-ape
+  - bioconductor-rhtslib
+  - sqlalchemy[version='>=1.4']
+  - matplotlib
+  - jupyterlab
+  - r-phytools
+  - bcftools
+  - ca-certificates
+  - papermill
