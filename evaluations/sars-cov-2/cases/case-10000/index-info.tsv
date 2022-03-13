@@ -1,4 +1,4 @@
-Name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
-case-10000	1	10000	39068	9165	32	29903	3903.0	1729048576.0	992948224.0	5303734272.0	572.59	25632882688.0	1553395712.0	183656448.0				4475.59	25632882688.0
-case-10000	2	10000	39068	9165	32	29903	3900.0	1683640320.0	992825344.0	5303484416.0	568.69	29580480512.0	1547644928.0	183664640.0				4468.6900000000005	29580480512.0
-case-10000	3	10000	39068	9165	32	29903	3900.0	1579671552.0	992739328.0	5303521280.0	634.87	29243584512.0	1555427328.0	183652352.0				4534.87	29243584512.0
+Name	Reference name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
+case-10000	NC_045512	1	10000	39089	9186	32	29903	3901.0	1832620032.0	993468416.0	5646360576.0	614.08	30779228160.0	1685012480.0	183599104.0				4515.08	30779228160.0
+case-10000	NC_045512	2	10000	39089	9186	32	29903	3900.0	1693687808.0	992976896.0	5646278656.0	631.01	28983832576.0	1564438528.0	183652352.0				4531.01	28983832576.0
+case-10000	NC_045512	3	10000	39089	9186	32	29903	3845.0	1576226816.0	992870400.0	5646184448.0	641.01	29944446976.0	1691652096.0	183705600.0				4486.01	29944446976.0

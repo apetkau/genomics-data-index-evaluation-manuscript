@@ -15,7 +15,7 @@ do
 		else
 			d=`date | tr -d '\n'`
 			echo "$d: query comparison $case_file"
-			papermill template-4-query.ipynb 4-query.${name}.ipynb -f $case_file
+			papermill --log-output template-4-query.ipynb 4-query.${name}.ipynb -f $case_file
 		fi
 	else
 		echo "case $case_dir is not completed yet"
