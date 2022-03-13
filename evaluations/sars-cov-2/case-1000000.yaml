@@ -1,4 +1,0 @@
-cases_dir: 'cases/case-100000'
-iterations: 3
-number_samples: 100000
-build_tree: False
