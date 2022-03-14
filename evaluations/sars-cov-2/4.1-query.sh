@@ -4,7 +4,7 @@ for case_dir in cases/case-*;
 do        
 	name=`basename $case_dir`
 	case_file=${name}.yaml
-	index_info=$case_dir/sql-batch-index-info.tsv
+	index_info=$case_dir/index-info.tsv
 	query_cli=$case_dir/sql-batch-query-cli.tsv
 
 	if [ -e $index_info ];
