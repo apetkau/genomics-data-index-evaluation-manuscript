@@ -1,0 +1,6 @@
+cases_dir: 'cases/case-08'
+iterations: 3
+max_samples_per_organism: 8
+full_dataset: False
+single_index: False
+build_tree: True
