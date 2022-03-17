@@ -45,3 +45,4 @@ gdi init index
 gdi --project-dir index --ncores 32 analysis --use-conda --no-load-data --reference-file references/NC_045512.gbk.gz --sample-batch-size 10000 --input-structured-genomes-file input-files.tsv
 gdi --project-dir index --ncores 32 load vcf --reference-file references/NC_045512.gbk.gz --sample-batch-size 10000 snakemake-assemblies.1628885062.6623144/gdi-input.fofn
 ```
+
