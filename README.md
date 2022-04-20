@@ -10,7 +10,8 @@ The evaluations are divided up into three different categories:
 2. **[SARS-CoV-2 genome assemblies](evaluations/sars-cov-2)**: An evaluation by loading a subset of SARS-CoV-2 genomes.
    1. [Figures](evaluations/sars-cov-2/5-compare-results.ipynb): The Jupyter notebook containing the figures.
 3. **[Bacterial WGS reads](evaluations/reads)**: An evaluation by loading a set of WGS sequence reads derived from a number of bacterial species.
-   1. [Figures](evaluations/reads/6-compare-results.ipynb): The Jupyter notebook containing the figures.
+   1. [Figures: Performance](evaluations/reads/5-analysis-runtime.ipynb): The Jupyter notebook containing the performance (runtime, memory, disk) figures.
+   1. [Figures: Clustering](evaluations/reads/6-compare-results.ipynb): The Jupyter notebook containing the clustering figures.
 
 [Genomics Data Index]: https://github.com/apetkau/genomics-data-index
 [cmdbench]: https://github.com/manzik/cmdbench
