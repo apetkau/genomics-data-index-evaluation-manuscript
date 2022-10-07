@@ -1,11 +1,11 @@
 Sample	Assemblies	Reads1	Reads2
-Wuhan/IPBCAMS-WH-04/2019	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Wuhan__IPBCAMS-WH-04__2019.fasta.gz		
-CHN/Wuhan_IME-WH05/2019	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/CHN__Wuhan_IME-WH05__2019.fasta.gz		
-FR993751	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/FR993751.fasta.gz		
-Switzerland/100080/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100080__2020.fasta.gz		
-Switzerland/100076/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100076__2020.fasta.gz		
-Switzerland/100083/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100083__2020.fasta.gz		
-Switzerland/100098/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100098__2020.fasta.gz		
-Switzerland/100092/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100092__2020.fasta.gz		
-Switzerland/100108/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100108__2020.fasta.gz		
-Switzerland/100124/2020	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation/evaluations/sars-cov-2/input/split/Switzerland__100124__2020.fasta.gz		
+Scotland/QEUH-3DF3D03/2022	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/Scotland__QEUH-3DF3D03__2022.fasta.gz		
+Denmark/DCGC-384569/2022	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/Denmark__DCGC-384569__2022.fasta.gz		
+OW500387	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/OW500387.fasta.gz		
+USA/TG1138574/2022	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/USA__TG1138574__2022.fasta.gz		
+USA/TX-CDC-ASC210194138/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/USA__TX-CDC-ASC210194138__2021.fasta.gz		
+USA/TX-CDC-QDX31730234/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/USA__TX-CDC-QDX31730234__2021.fasta.gz		
+Switzerland/GE-ETHZ-540298/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/Switzerland__GE-ETHZ-540298__2021.fasta.gz		
+England/ALDP-2059828/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/England__ALDP-2059828__2021.fasta.gz		
+USA/NY-PRL-2021_0422_02B15/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/USA__NY-PRL-2021_0422_02B15__2021.fasta.gz		
+USA/OK-CDC-ASC210060059/2021	/home/CSCScience.ca/apetkau/workspace/genomics-data-index-evaluation-manuscript/evaluations/sars-cov-2/input/split/USA__OK-CDC-ASC210060059__2021.fasta.gz		

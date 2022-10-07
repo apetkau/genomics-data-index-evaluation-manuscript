@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#for case_file in *.yaml; 
-for case_file in case-10000-batch-10000.yaml case-20000-batch-10000.yaml case-2000-batch-10000.yaml case-5000-batch-10000.yaml;
+for case_file in *.yaml; 
+#for case_file in case-10000-batch-10000.yaml case-20000-batch-10000.yaml case-2000-batch-10000.yaml case-5000-batch-10000.yaml;
 do
 	name=`basename $case_file .yaml`
 	d=`date | tr -d '\n'`
