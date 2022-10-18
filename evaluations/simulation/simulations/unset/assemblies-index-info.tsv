@@ -1,2 +1,2 @@
 Name	Reference name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
-unset assemblies	reference	1	60	1498	1421	32	19699	100.06	2661466112.0	418705408.0	2239840256.0	6.6	6191988736.0	270745600.0	1388544.0	8.14	273854464.0	252481536.0	114.8	6191988736.0
+unset assemblies	reference	1	60	1498	1421	32	19699	105.98	2566025216.0	415911936.0	2232442880.0	7.29	6186188800.0	269320192.0	1384448.0	8.56	272617472.0	251715584.0	121.83000000000001	6186188800.0
