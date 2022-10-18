@@ -1,5 +1,5 @@
 read_coverage: 50
 mincov: 10
 simulation_dir: 'simulations/cov-50'
-iterations: 3
+iterations: 1
 sub_alpha: 0.2
