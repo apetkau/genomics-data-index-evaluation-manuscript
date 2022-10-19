@@ -1,4 +1,4 @@
 Name	True Positives	True Negatives	False Positives	False Negatives	Sensitivity	Specificity	Precision	F1 Score
 unset reads	14851		752	2081	0.8770966217812426	~1 (not calculated)	0.951804140229443	0.9129245428000615
-unset assemblies	16838		0	94	0.9944483817623435	~1 (not calculated)	1.0	0.9972164643174415
+unset assemblies	16762		76	170	0.9899598393574297	~1 (not calculated)	0.9954863998099537	0.992715427894581
 unset reads-to-assemblies	16428		77	504	0.9702338766832034	~1 (not calculated)	0.9953347470463496	0.9826240392379699

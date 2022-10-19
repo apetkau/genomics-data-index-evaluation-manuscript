@@ -1,2 +1,2 @@
 Name	Reference name	Iteration	Number samples	Number features (all)	Number features (no unknown)	Number cores	Reference length	Analysis runtime	Analysis memory (max)	Analysis memory (max/process)	Analysis disk uage	Index runtime	Index memory (max)	Index memory (max/process)	Index size	Tree runtime	Tree memory (max)	Tree memory (max/process)	Total runtime	Max memory
-unset reads	reference	1	60	3488	1385	32	19699	140.4	3260559360.0	758460416.0	3248803840.0	8.71	6251106304.0	308039680.0	2162688.0	9.88	286969856.0	251465728.0	158.99	6251106304.0
+unset reads	reference	1	60	3488	1385	32	19699	165.37	3209834496.0	759869440.0	3248779264.0	8.73	6216642560.0	306974720.0	2170880.0	10.33	286969856.0	251367424.0	184.43	6216642560.0
